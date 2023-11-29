@@ -19,6 +19,10 @@ builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IAdvertService, AdvertService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ISettingService, SettingService>();
+builder.Services.AddScoped<ILayoutService, LayoutService>();
+
+
 
 var app = builder.Build();
 

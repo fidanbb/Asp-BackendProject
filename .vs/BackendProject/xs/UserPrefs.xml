@@ -6,41 +6,19 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Views/Shop/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Data/AppDbContext.cs">
     <Files>
-      <File FileName="BackendProject/Data/AppDbContext.cs" Line="76" Column="97" />
-      <File FileName="BackendProject/Controllers/HomeController.cs" Line="60" Column="10" />
-      <File FileName="BackendProject/Helpers/Mappings/MappingProfile.cs" Line="22" Column="150" />
-      <File FileName="BackendProject/Views/Home/Index.cshtml" Line="93" Column="1" />
-      <File FileName="BackendProject/Views/Shared/_ProductsPartial.cshtml" Line="1" Column="23" />
-      <File FileName="BackendProject/Views/Shop/Index.cshtml" Line="40" Column="12" />
+      <File FileName="BackendProject/Data/AppDbContext.cs" Line="148" Column="54" />
+      <File FileName="BackendProject/Controllers/HomeController.cs" />
+      <File FileName="BackendProject/Helpers/Mappings/MappingProfile.cs" />
+      <File FileName="BackendProject/Views/Shared/_Layout.cshtml" Line="137" Column="100" />
+      <File FileName="BackendProject/Services/LayoutService.cs" Line="25" Column="48" />
+      <File FileName="BackendProject/Models/Blog.cs" Line="7" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BackendProject">
-            <Node name="BackendProject">
-              <Node name="Areas" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="ViewModels" expanded="True">
-                    <Node name="Product" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="Helpers" expanded="True">
-                <Node name="Enums" expanded="True" />
-                <Node name="Mappings" expanded="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="Shop" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="BackendProject" expanded="True" />
         </State>
       </Pad>
     </Pads>

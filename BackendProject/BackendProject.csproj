@@ -6,4 +6,62 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Admin\Controllers\" />
+    <None Remove="Areas\Admin\Views\" />
+    <None Remove="Areas\Admin\Views\Shared\" />
+    <None Remove="Areas\Admin\Views\Dashboard\" />
+    <None Remove="Data\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="Areas\Admin\ViewModels\" />
+    <None Remove="Areas\Admin\ViewModels\Slider\" />
+    <None Remove="Helpers\" />
+    <None Remove="Helpers\Mappings\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Helpers\Enums\" />
+    <None Remove="Areas\Admin\ViewModels\Advert\" />
+    <None Remove="Areas\Admin\ViewModels\Review\" />
+    <None Remove="Views\Shop\" />
+    <None Remove="Areas\Admin\ViewModels\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\Dashboard\" />
+    <Folder Include="Data\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="Areas\Admin\ViewModels\" />
+    <Folder Include="Areas\Admin\ViewModels\Slider\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Helpers\Mappings\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Helpers\Enums\" />
+    <Folder Include="Areas\Admin\ViewModels\Advert\" />
+    <Folder Include="Areas\Admin\ViewModels\Review\" />
+    <Folder Include="Views\Shop\" />
+    <Folder Include="Areas\Admin\ViewModels\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.24" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.24">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.24">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.24" />
+  </ItemGroup>
 </Project>

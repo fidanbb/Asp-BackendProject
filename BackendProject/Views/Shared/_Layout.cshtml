@@ -5,6 +5,7 @@
 
     HeaderVM headerDatas = _layoutService.GetHeaderDatas();
     FooterVM footerDatas = _layoutService.GetFooterDatas();
+    List<SocialVM> socialDatas = await _layoutService.GetSocialDatas();
 }
 
 
@@ -58,11 +59,12 @@
 
                                     <!-- Header Social -->
                                     <div class="header-social col-md-4 col-12">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                        <a href="#"><i class="fa fa-instagram"></i></a>
-                                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                        @foreach (var item in socialDatas)
+                                        {
+
+                                            <a href="#"><i class="@item.Name"></i></a>
+                                        }
+
                                     </div>
 
                                     <!-- Header Logo -->

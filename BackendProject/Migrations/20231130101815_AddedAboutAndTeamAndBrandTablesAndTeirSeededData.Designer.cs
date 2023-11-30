@@ -4,6 +4,7 @@ using BackendProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackendProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231130101815_AddedAboutAndTeamAndBrandTablesAndTeirSeededData")]
+    partial class AddedAboutAndTeamAndBrandTablesAndTeirSeededData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,11 +58,11 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1900),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9110),
                             Description = "There are many variations of passages of Lorem Ipsum available, majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly kn je believable There are manations of passages of Lorem Ipsum available, but the majority ahave suffered ami tar cholnay vulbo na alte ration. majority have suffered alteration in",
                             Image = "about.jpg",
                             SoftDeleted = false,
-                            Title = "<h2>About <span>Christ</span></h2>",
+                            Title = "h2>About <span>Christ</span></h2>",
                             VideoLink = "https://www.youtube.com/watch?v=7e90gBu4pas"
                         });
                 });
@@ -98,7 +100,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1440),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8630),
                             Description = "<h1 class=\"white\"><span>Gifts</span>Christmas</h1>",
                             DirectionId = 1,
                             Image = "1.jpg",
@@ -107,7 +109,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1450),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8630),
                             Description = "<h2 class=\"black\"><span class=\"small\">Save <span class=\"red\">25%</span></span><span class=\"red\">Offer</span> Christmas</h2>",
                             DirectionId = 2,
                             Image = "2.jpg",
@@ -240,7 +242,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 1,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1710),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8890),
                             Image = "1.jpg",
                             IsMain = true,
                             SoftDeleted = false
@@ -249,7 +251,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 2,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1720),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8900),
                             Image = "2.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -258,7 +260,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 3,
                             BlogId = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1720),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8900),
                             Image = "3.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -267,7 +269,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 4,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1720),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8900),
                             Image = "2.jpg",
                             IsMain = true,
                             SoftDeleted = false
@@ -276,7 +278,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 5,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1720),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8910),
                             Image = "1.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -285,7 +287,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 6,
                             BlogId = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1730),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8910),
                             Image = "3.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -294,7 +296,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 7,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1730),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8910),
                             Image = "3.jpg",
                             IsMain = true,
                             SoftDeleted = false
@@ -303,7 +305,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 8,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1730),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8910),
                             Image = "1.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -312,7 +314,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 9,
                             BlogId = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1740),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8920),
                             Image = "2.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -321,7 +323,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 10,
                             BlogId = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1740),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8920),
                             Image = "1.jpg",
                             IsMain = true,
                             SoftDeleted = false
@@ -330,7 +332,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 11,
                             BlogId = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1740),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8920),
                             Image = "2.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -339,7 +341,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 12,
                             BlogId = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1740),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8920),
                             Image = "3.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -348,7 +350,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 13,
                             BlogId = 5,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1750),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8930),
                             Image = "2.jpg",
                             IsMain = true,
                             SoftDeleted = false
@@ -357,7 +359,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 14,
                             BlogId = 5,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1750),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8930),
                             Image = "1.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -366,7 +368,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 15,
                             BlogId = 5,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1750),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8930),
                             Image = "3.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -375,7 +377,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 16,
                             BlogId = 6,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1760),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8930),
                             Image = "3.jpg",
                             IsMain = true,
                             SoftDeleted = false
@@ -384,7 +386,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 17,
                             BlogId = 6,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1760),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8940),
                             Image = "1.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -393,7 +395,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 18,
                             BlogId = 6,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1760),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8940),
                             Image = "2.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -402,7 +404,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 19,
                             BlogId = 7,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1760),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8940),
                             Image = "2.jpg",
                             IsMain = true,
                             SoftDeleted = false
@@ -411,7 +413,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 20,
                             BlogId = 7,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1770),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8940),
                             Image = "1.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -420,7 +422,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 21,
                             BlogId = 7,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1770),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8950),
                             Image = "3.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -429,7 +431,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 22,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1770),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8950),
                             Image = "3.jpg",
                             IsMain = true,
                             SoftDeleted = false
@@ -438,7 +440,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 23,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1770),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8950),
                             Image = "1.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -447,7 +449,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 24,
                             BlogId = 8,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1770),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8950),
                             Image = "2.jpg",
                             IsMain = false,
                             SoftDeleted = false
@@ -672,42 +674,42 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1940),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9150),
                             Image = "1.png",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1940),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9150),
                             Image = "2.png",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1940),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9160),
                             Image = "3.png",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1950),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9160),
                             Image = "4.png",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1950),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9160),
                             Image = "5.png",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1950),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9160),
                             Image = "6.png",
                             SoftDeleted = false
                         });
@@ -738,99 +740,29 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1500),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8690),
                             Name = "Decorations",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1510),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8690),
                             Name = "Outfits",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1510),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8690),
                             Name = "Candles",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1510),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8690),
                             Name = "Toys",
-                            SoftDeleted = false
-                        });
-                });
-
-            modelBuilder.Entity("BackendProject.Models.ContactInfo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Descriptiom")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("SoftDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ContactInfos");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1990),
-                            Descriptiom = "It is a long established fact that readewill be distracted by the readable content of a page when looking at ilayout.",
-                            SoftDeleted = false
-                        });
-                });
-
-            modelBuilder.Entity("BackendProject.Models.ContactMessage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Message")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("SoftDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ContactMessages");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(2000),
-                            Email = "fidanbb@gmaill",
-                            Message = "Helllooo",
-                            Name = "Fidan Bashirova",
                             SoftDeleted = false
                         });
                 });
@@ -863,7 +795,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1480),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8660),
                             FullName = "Betty More",
                             Image = "1.jpg",
                             SoftDeleted = false
@@ -871,7 +803,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1490),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8670),
                             FullName = "Andy Morgan",
                             Image = "1.jpg",
                             SoftDeleted = false
@@ -879,7 +811,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1490),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8670),
                             FullName = "Sandra Black",
                             Image = "1.jpg",
                             SoftDeleted = false
@@ -951,7 +883,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 1,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1530),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8710),
                             Description = "Desc1",
                             Name = "Holiday Candle",
                             Price = 35m,
@@ -961,7 +893,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 2,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1540),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8720),
                             Description = "Desc1",
                             Name = "Christmas Tree",
                             Price = 40m,
@@ -971,7 +903,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 3,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1540),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8720),
                             Description = "Desc1",
                             Name = "Santa Claus Doll",
                             Price = 30m,
@@ -981,7 +913,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 4,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1540),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8730),
                             Description = "Desc1",
                             Name = "Holiday Cap",
                             Price = 50m,
@@ -991,7 +923,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 5,
                             CategoryId = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1550),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8730),
                             Description = "Desc1",
                             Name = "Holiday Doll",
                             Price = 60m,
@@ -1001,7 +933,7 @@ namespace BackendProject.Migrations
                         {
                             Id = 6,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1550),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8730),
                             Description = "Desc1",
                             Name = "Holiday Candle",
                             Price = 30m,
@@ -1042,7 +974,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1570),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8750),
                             Image = "1.jpg",
                             IsMain = true,
                             ProductId = 1,
@@ -1051,7 +983,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1570),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8750),
                             Image = "2.jpg",
                             IsMain = false,
                             ProductId = 1,
@@ -1060,7 +992,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1570),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8750),
                             Image = "2.jpg",
                             IsMain = true,
                             ProductId = 2,
@@ -1069,7 +1001,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1570),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8760),
                             Image = "3.jpg",
                             IsMain = false,
                             ProductId = 2,
@@ -1078,7 +1010,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1580),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8760),
                             Image = "3.jpg",
                             IsMain = true,
                             ProductId = 3,
@@ -1087,7 +1019,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1580),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8760),
                             Image = "4.jpg",
                             IsMain = false,
                             ProductId = 3,
@@ -1096,7 +1028,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1580),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8760),
                             Image = "4.jpg",
                             IsMain = true,
                             ProductId = 4,
@@ -1105,7 +1037,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1580),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8770),
                             Image = "5.jpg",
                             IsMain = false,
                             ProductId = 4,
@@ -1114,7 +1046,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1590),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8770),
                             Image = "5.jpg",
                             IsMain = true,
                             ProductId = 5,
@@ -1123,7 +1055,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1590),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8770),
                             Image = "6.jpg",
                             IsMain = false,
                             ProductId = 5,
@@ -1132,7 +1064,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1590),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8780),
                             Image = "6.jpg",
                             IsMain = true,
                             ProductId = 6,
@@ -1141,7 +1073,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1590),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8780),
                             Image = "2.jpg",
                             IsMain = false,
                             ProductId = 6,
@@ -1179,7 +1111,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1460),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8650),
                             CustomerId = 1,
                             Message = "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
                             SoftDeleted = false
@@ -1187,7 +1119,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1460),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8650),
                             CustomerId = 2,
                             Message = "I absolutely loved this product! It exceeded my expectations in every way. The quality is outstanding, and it arrived sooner than expected.",
                             SoftDeleted = false
@@ -1195,7 +1127,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1470),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8650),
                             CustomerId = 3,
                             Message = "Unfortunately, this item did not meet my expectations. The quality was subpar, and it didn't function as described. I'm quite disappointed with my purchase.",
                             SoftDeleted = false
@@ -1230,7 +1162,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1620),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8800),
                             Key = "HeaderLogo",
                             SoftDeleted = false,
                             Value = "logo.png"
@@ -1238,7 +1170,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1620),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8800),
                             Key = "FooterLogo",
                             SoftDeleted = false,
                             Value = "footer-logo.png"
@@ -1246,7 +1178,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1620),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8800),
                             Key = "Address",
                             SoftDeleted = false,
                             Value = "ur address goes here,street Crossroad 123"
@@ -1254,7 +1186,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1620),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8810),
                             Key = "Phone",
                             SoftDeleted = false,
                             Value = "+99 859 658 589 . +69 587 456 25"
@@ -1262,7 +1194,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1630),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8810),
                             Key = "Eax",
                             SoftDeleted = false,
                             Value = "+55 784 7585 . + 985 698 586"
@@ -1270,7 +1202,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1630),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8810),
                             Key = "Email",
                             SoftDeleted = false,
                             Value = "christ@email.com"
@@ -1311,7 +1243,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1290),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8490),
                             Description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.",
                             Header = "Save 25%",
                             Image = "1.jpg",
@@ -1321,71 +1253,12 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1320),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8530),
                             Description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.",
                             Header = "Save 25%",
                             Image = "2.jpg",
                             SoftDeleted = false,
                             Title = "Christmas Sale"
-                        });
-                });
-
-            modelBuilder.Entity("BackendProject.Models.Social", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("SoftDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Socials");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1970),
-                            Name = "fa fa-facebook",
-                            SoftDeleted = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1970),
-                            Name = "fa fa-twitter",
-                            SoftDeleted = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1970),
-                            Name = "fa fa-instagram",
-                            SoftDeleted = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1980),
-                            Name = "fa fa-pinterest-p",
-                            SoftDeleted = false
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1980),
-                            Name = "fa fa-linkedin",
-                            SoftDeleted = false
                         });
                 });
 
@@ -1414,28 +1287,28 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1880),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9090),
                             Email = "fidanbb@gmail.com",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1880),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9090),
                             Email = "surac@gmail.com",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1880),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9100),
                             Email = "ismayil@gmail.com",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1890),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9100),
                             Email = "kubra@gmail.com",
                             SoftDeleted = false
                         });
@@ -1466,49 +1339,49 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1650),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8830),
                             Name = "Bestsellers",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1650),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8830),
                             Name = "Gifts",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1650),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8830),
                             Name = "New",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1650),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8830),
                             Name = "Christmas Gift",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1650),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8840),
                             Name = "Festive Cakes",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1660),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8840),
                             Name = "Home Decor",
                             SoftDeleted = false
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1660),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(8840),
                             Name = "Toys",
                             SoftDeleted = false
                         });
@@ -1545,7 +1418,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1920),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9130),
                             FullName = "Terry Soto",
                             Image = "1.jpg",
                             Position = "Ceo",
@@ -1554,7 +1427,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1920),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9130),
                             FullName = "Maria Lane",
                             Image = "2.jpg",
                             Position = "Marketer",
@@ -1563,7 +1436,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1920),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9130),
                             FullName = "Justin Evans",
                             Image = "3.jpg",
                             Position = "Developer",
@@ -1572,7 +1445,7 @@ namespace BackendProject.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 11, 30, 17, 46, 37, 75, DateTimeKind.Local).AddTicks(1930),
+                            CreatedDate = new DateTime(2023, 11, 30, 14, 18, 14, 865, DateTimeKind.Local).AddTicks(9130),
                             FullName = "Rose Dixon",
                             Image = "4.jpg",
                             Position = "Designer",

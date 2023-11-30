@@ -1,0 +1,66 @@
+﻿@model ContactPageVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Page Banner Section Start-->
+<div class="page-banner-section section" style="background-image: url(img/bg/page-banner.jpg)">
+    <div class="container">
+        <div class="row">
+
+            <!-- Page Title Start -->
+            <div class="page-title text-center col">
+                <h1>contact us</h1>
+            </div><!-- Page Title End -->
+
+        </div>
+    </div>
+</div><!-- Page Banner Section End-->
+<!-- Contact Section Start-->
+<div class="contact-section section bg-white pt-120">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xl-10 col-12 ml-auto mr-auto">
+
+                <div class="contact-wrapper">
+                    <div class="row">
+
+                        <div class="contact-info col-lg-5 col-12">
+                            <h4 class="title">Contact Info</h4>
+                            <p>@Model.Contact.Description</p>
+                            <ul>
+                                <li><span>Address:</span>@Model.Contact.Address</li>
+                                <li><span>Email:</span>@Model.Contact.Email</li>
+                                <li><span>Phone:</span>@Model.Contact.Phone</li>
+                            </ul>
+                            <div class="contact-social">
+                                @foreach (var item in Model.Socials)
+                                {
+                                    <a href="#"><i class="@item.Name"></i></a>
+                                }
+
+                            </div>
+                        </div>
+                        <div class="contact-form col-lg-7 col-12">
+                            <h4 class="title">Send Your Massage</h4>
+                            <form id="contact-form" action="https://demo.hasthemes.com/christ-preview/christ/mail.php" method="post">
+                                <input type="text" name="name" placeholder="Your Name">
+                                <input type="email" name="email" placeholder="Your Email">
+                                <textarea name="message" placeholder="Your Message"></textarea>
+                                <input type="submit" value="Submit">
+                            </form>
+                            <p class="form-messege"></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div><!-- Contact Section End-->
+<!-- Contact Map -->
+
+<iframe id="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.234746326872!2d49.83827322721483!3d40.37985064294282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d0a3ea7028d%3A0xac9d73dbd66392c8!2s28%20May!5e0!3m2!1sen!2saz!4v1701355481809!5m2!1sen!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

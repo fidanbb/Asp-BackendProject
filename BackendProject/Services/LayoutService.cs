@@ -1,5 +1,7 @@
 ﻿using System;
+using AutoMapper;
 using BackendProject.Areas.Admin.ViewModels.Layout;
+using BackendProject.Areas.Admin.ViewModels.Social;
 using BackendProject.Services.Interfaces;
 
 namespace BackendProject.Services
@@ -7,9 +9,14 @@ namespace BackendProject.Services
 	public class LayoutService:ILayoutService
 	{
         private readonly ISettingService _settingService;
-		public LayoutService(ISettingService settingService)
+        private readonly ISocialService _socialService;
+
+		public LayoutService(ISettingService settingService,
+                             ISocialService socialService)
 		{
             _settingService = settingService;
+            _socialService = socialService;
+
 		}
 
         public FooterVM GetFooterDatas()
@@ -35,6 +42,11 @@ namespace BackendProject.Services
             {
                 Logo = settingDatas["HeaderLogo"]
             };
+        }
+
+        public async Task<List<SocialVM>> GetSocialDatas()
+        {
+            return await _socialService.GetAllAsync();
         }
     }
 }

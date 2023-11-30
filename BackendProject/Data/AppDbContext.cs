@@ -22,6 +22,13 @@ namespace BackendProject.Data
         public DbSet<BlogImage> BlogImages { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<BlogTag> BlogTags { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Social> Socials { get; set; }
+        public DbSet<ContactInfo> ContactInfos { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,6 +47,15 @@ namespace BackendProject.Data
             modelBuilder.Entity<Blog>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<BlogImage>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Tag>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Team>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<About>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Brand>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Social>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ContactMessage>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ContactInfo>().HasQueryFilter(m => !m.SoftDeleted);
+
+
+
 
             modelBuilder.Entity<Slider>().HasData(
               new Slider { Id = 1, Image = "1.jpg",Header= "Save 25%" ,Title = "Christmas Sale", Description = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.",  SoftDeleted = false },
@@ -289,6 +305,58 @@ namespace BackendProject.Data
                 new BlogTag { Id = 27, BlogId = 8, TagId = 2 },
                 new BlogTag { Id = 28, BlogId = 8, TagId = 5 }
 
+                );
+
+
+
+            modelBuilder.Entity<Subscribe>().HasData(
+                new Subscribe { Id=1,Email="fidanbb@gmail.com",SoftDeleted=false},
+                new Subscribe { Id = 2, Email = "surac@gmail.com", SoftDeleted = false },
+                new Subscribe { Id = 3, Email = "ismayil@gmail.com", SoftDeleted = false },
+                new Subscribe { Id = 4, Email = "kubra@gmail.com", SoftDeleted = false }
+                );
+
+
+            modelBuilder.Entity<About>().HasData(
+                new About {Id=1,Title= "<h2>About <span>Christ</span></h2>",
+                    Description= "There are many variations of passages of Lorem Ipsum available, majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly kn je believable There are manations of passages of Lorem Ipsum available, but the majority ahave suffered ami tar cholnay vulbo na alte ration. majority have suffered alteration in",
+                    Image="about.jpg",
+                    VideoLink= "https://www.youtube.com/watch?v=7e90gBu4pas",
+                    SoftDeleted=false }
+                );
+
+            modelBuilder.Entity<Team>().HasData(
+                new Team { Id=1,Image= "1.jpg", Position="Ceo",FullName="Terry Soto",SoftDeleted=false},
+                new Team { Id = 2, Image = "2.jpg", Position = "Marketer", FullName = "Maria Lane", SoftDeleted = false },
+                new Team { Id = 3, Image = "3.jpg", Position = "Developer", FullName = "Justin Evans", SoftDeleted = false },
+                new Team { Id = 4, Image = "4.jpg", Position = "Designer", FullName = "Rose Dixon", SoftDeleted = false }
+                );
+
+
+            modelBuilder.Entity<Brand>().HasData(
+
+                new Brand { Id=1,Image="1.png",SoftDeleted=false},
+                new Brand { Id = 2, Image = "2.png", SoftDeleted = false },
+                new Brand { Id = 3, Image = "3.png", SoftDeleted = false },
+                new Brand { Id = 4, Image = "4.png", SoftDeleted = false },
+                new Brand { Id = 5, Image = "5.png", SoftDeleted = false },
+                new Brand { Id = 6, Image = "6.png", SoftDeleted = false }
+                );
+
+            modelBuilder.Entity<Social>().HasData(
+                new Social { Id=1,Name= "fa fa-facebook", SoftDeleted=false},
+                new Social { Id = 2, Name = "fa fa-twitter", SoftDeleted = false },
+                new Social { Id = 3, Name = "fa fa-instagram", SoftDeleted = false },
+                new Social { Id = 4, Name = "fa fa-pinterest-p", SoftDeleted = false },
+                new Social { Id = 5, Name = "fa fa-linkedin", SoftDeleted = false }
+                );
+
+            modelBuilder.Entity<ContactInfo>().HasData(
+                new ContactInfo {Id=1,Descriptiom= "It is a long established fact that readewill be distracted by the readable content of a page when looking at ilayout.", SoftDeleted=false }
+                );
+
+            modelBuilder.Entity<ContactMessage>().HasData(
+                new ContactMessage { Id=1,Name="Fidan Bashirova",Email="fidanbb@gmaill",Message="Helllooo",SoftDeleted=false}
                 );
 
         }

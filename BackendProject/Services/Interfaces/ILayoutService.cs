@@ -1,5 +1,6 @@
 ﻿using System;
 using BackendProject.Areas.Admin.ViewModels.Layout;
+using BackendProject.Areas.Admin.ViewModels.Social;
 
 namespace BackendProject.Services.Interfaces
 {
@@ -7,6 +8,7 @@ namespace BackendProject.Services.Interfaces
 	{
 		HeaderVM GetHeaderDatas();
 		FooterVM GetFooterDatas();
+		Task<List<SocialVM>> GetSocialDatas();
 	}
 }
 

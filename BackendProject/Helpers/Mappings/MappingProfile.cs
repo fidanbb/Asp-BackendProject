@@ -1,11 +1,16 @@
 ﻿using System;
 using AutoMapper;
+using BackendProject.Areas.Admin.ViewModels.About;
 using BackendProject.Areas.Admin.ViewModels.Advert;
 using BackendProject.Areas.Admin.ViewModels.Blog;
+using BackendProject.Areas.Admin.ViewModels.Brand;
+using BackendProject.Areas.Admin.ViewModels.Contact;
 using BackendProject.Areas.Admin.ViewModels.Product;
 using BackendProject.Areas.Admin.ViewModels.Review;
 using BackendProject.Areas.Admin.ViewModels.Slider;
+using BackendProject.Areas.Admin.ViewModels.Social;
 using BackendProject.Areas.Admin.ViewModels.Tag;
+using BackendProject.Areas.Admin.ViewModels.Team;
 using BackendProject.Models;
 
 namespace BackendProject.Helpers.Mappings
@@ -28,6 +33,11 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<Tag, TagVM>();
             CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m=>m.Tag).ToList()));
 
+            CreateMap<Brand, BrandVM>();
+            CreateMap<About, AboutVM>();
+            CreateMap<Team, TeamVM>();
+            CreateMap<Social, SocialVM>();
+            CreateMap<ContactInfo, ContactVM>();
         }
     }
 }

@@ -23,6 +23,11 @@ builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<ILayoutService, LayoutService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<ISocialService, SocialService>();
+builder.Services.AddScoped<IContactService, ContactService>();
 
 
 var app = builder.Build();

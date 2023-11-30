@@ -15,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
+#region Service DependencyInjection
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IAdvertService, AdvertService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
@@ -28,6 +29,8 @@ builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<ISocialService, SocialService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IDirectionService, DirectionService>();
+#endregion
 
 
 var app = builder.Build();

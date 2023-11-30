@@ -1,0 +1,29 @@
+﻿@model AdvertCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container mt-5" style="margin-left:30px">
+    <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label asp-for="Description">Description</label>
+            <input asp-for="Description" class="form-control" />
+            <span class="text-danger" asp-validation-for="Description"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Directionid">Directions</label>
+            <select asp-for="Directionid" asp-items="@ViewBag.directions" class="form-control">
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Photo">Image</label>
+            <input asp-for="Photo" class="form-control">
+            <span class="text-danger" asp-validation-for="Photo"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a class="btn btn-light" asp-action="Index">Back</a>
+    </form>
+</div>

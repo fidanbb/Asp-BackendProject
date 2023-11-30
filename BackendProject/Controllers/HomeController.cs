@@ -36,7 +36,7 @@ namespace BackendProject.Controllers
         public async Task< IActionResult> Index()
         {
             List<SliderVM> sliders = await _sliderService.GetAllAsync();
-            List<AdvertVM> adverts = await _advertService.GetAllWithIncludeAsync();
+            List<AdvertVM> adverts = await _advertService.GetAllWithIncludeByTakeAsync(2);
             List<ReviewVM> reviews = await _reviewService.GetAllWithIncludeAsync();
             List<ProductVM> products = await _productService.GetByTakeWithIncludes(3);
             List<BlogVM> blogs = await _blogService.GetByTakeWithImagesAsync(3);

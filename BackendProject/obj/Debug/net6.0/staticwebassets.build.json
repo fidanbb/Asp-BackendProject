@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dPOAk9QBDMFHuuKRAXOdIZZwJza9wTTjKnwWIQE+kok=",
+  "Hash": "ZWxqu+L9tlswZcV9PHQhU1g58rdCAR3kjdhsSVLHb3s=",
   "Source": "BackendProject",
   "BasePath": "_content/BackendProject",
   "Mode": "Default",
@@ -29952,6 +29952,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/banner/2.jpg"
+    },
+    {
+      "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/banner/bec3eab8-8787-4ddd-b575-f00185e14630-2.jpg",
+      "SourceId": "BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/",
+      "BasePath": "_content/BackendProject",
+      "RelativePath": "img/banner/bec3eab8-8787-4ddd-b575-f00185e14630-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/banner/bec3eab8-8787-4ddd-b575-f00185e14630-2.jpg"
     },
     {
       "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/bg/footer-bg.png",

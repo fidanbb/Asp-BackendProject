@@ -38,6 +38,9 @@
     <None Remove="Views\Contact\" />
     <None Remove="Areas\Admin\ViewModels\Social\" />
     <None Remove="Areas\Admin\ViewModels\Contact\" />
+    <None Remove="Areas\Admin\Views\Brand\" />
+    <None Remove="Helpers\Extentions\" />
+    <None Remove="Areas\Admin\Views\Advert\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -71,6 +74,9 @@
     <Folder Include="Views\Contact\" />
     <Folder Include="Areas\Admin\ViewModels\Social\" />
     <Folder Include="Areas\Admin\ViewModels\Contact\" />
+    <Folder Include="Areas\Admin\Views\Brand\" />
+    <Folder Include="Helpers\Extentions\" />
+    <Folder Include="Areas\Admin\Views\Advert\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />

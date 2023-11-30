@@ -12,6 +12,7 @@ using BackendProject.Areas.Admin.ViewModels.Social;
 using BackendProject.Areas.Admin.ViewModels.Tag;
 using BackendProject.Areas.Admin.ViewModels.Team;
 using BackendProject.Models;
+using BackendProject.ViewModels;
 
 namespace BackendProject.Helpers.Mappings
 {
@@ -38,6 +39,10 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<Team, TeamVM>();
             CreateMap<Social, SocialVM>();
             CreateMap<ContactInfo, ContactVM>();
+            CreateMap<Direction, DirectionVM>();
+            CreateMap<AdvertCreateVM, Advert>();
+
+
         }
     }
 }

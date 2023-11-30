@@ -3,7 +3,8 @@ namespace BackendProject.Areas.Admin.ViewModels.Tag
 {
 	public class TagVM
 	{
-		public string Name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
 	}
 }
 

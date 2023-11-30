@@ -1,0 +1,56 @@
+﻿@model List<AdvertVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container" style="margin-left:30px">
+    <h1 class="text-center mt-3 mb-3">Brands</h1>
+    <a class="btn btn-success text-white" asp-action="Create">Create</a>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Text Direction
+                    </th>
+
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            <img src="~/img/banner/@item.Image" alt="image" />
+                        </td>
+                        <td class="py-1" style="width:200px;white-space:normal">
+                            @item.Description
+                        </td>
+                        <td class="py-1">
+                            @item.Direction
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@item.Id">
+                                <button type="submit" class="btn btn-outline-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

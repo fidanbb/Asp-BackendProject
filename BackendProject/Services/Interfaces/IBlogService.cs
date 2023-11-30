@@ -9,6 +9,7 @@ namespace BackendProject.Services.Interfaces
         Task<List<BlogVM>> GetPaginatedDatasAsync(int page, int take);
         Task<int> GetCountAsync();
         Task<List<BlogVM>> GetByTakeWithImagesAsync(int take);
+        Task<BlogDetailVM> GetByIdAsync(int id);
 
     }
 }

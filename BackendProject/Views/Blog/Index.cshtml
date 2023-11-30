@@ -34,7 +34,7 @@
                         <div class="blog-item col-md-6 col-12 mb-60">
 
                             <!-- Image -->
-                            <a href="blog-details.html" class="image"><img src="~/img/blog/@item.Image" alt="blog"></a>
+                            <a asp-action="Detail" asp-route-id="@item.Id" class="image"><img src="~/img/blog/@item.Image" alt="blog"></a>
 
                             <!-- Content -->
                             <div class="content fix">
@@ -46,7 +46,7 @@
                                 <h4 class="title"><a href="blog-details.html">@item.Title</a></h4>
 
                                 <!-- Decs -->
-                                <p>@item.Description.Substring(0, 70)</p>
+                                <p>@item.Description.Substring(0, (int)Math.Ceiling((item.Description.Length * 0.2)))</p>
 
                                 <!-- Read More Link -->
                                 <a href="blog-details.html" class="read-more">Read More</a>
@@ -117,12 +117,12 @@
                                 <!-- Sdebar Post -->
                                 <div class="sidebar-post fix">
                                     <!-- Image -->
-                                    <a href="blog-details.html" class="image"><img src="~/img/blog/@item.Image" alt=""></a>
+                                    <a asp-action="Detail" asp-route-id="@item.Id" class="image"><img src="~/img/blog/@item.Image" alt=""></a>
                                     <!-- Content -->
                                     <div class="content fix">
                                         <span class="date">@item.CreatedDate.ToString("MM/dd/yyyy")</span>
-                                        <a href="blog-details.html" class="title">@item.Title.Substring(0, 15)</a>
-                                        <p>@item.Description.Substring(0, 20)</p>
+                                        <a href="blog-details.html" class="title">@item.Title.Substring(0, (int)Math.Ceiling((item.Title.Length * 0.4))).</a>
+                                        <p>@item.Description.Substring(0, (int)Math.Ceiling((item.Description.Length * 0.2)))</p>
                                     </div>
                                 </div>
                             }

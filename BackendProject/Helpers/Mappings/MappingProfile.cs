@@ -26,6 +26,8 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<Blog, BlogVM>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
 
             CreateMap<Tag, TagVM>();
+            CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m=>m.Tag).ToList()));
+
         }
     }
 }

@@ -197,22 +197,22 @@
                 <div class="blog-item col-lg-4 col-md-6 col-12 mb-60">
 
                     <!-- Image -->
-                    <a href="blog-details.html" class="image"><img src="~/img/blog/@item.Image" alt="blog"></a>
+                    <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id"  class="image"><img src="~/img/blog/@item.Image" alt="blog"></a>
 
                     <!-- Content -->
                     <div class="content fix">
 
                         <!-- Publish Date -->
-                        <span class="publish"><span>Published on:</span> 25 May 2017</span>
+                        <span class="publish"><span>Published on:</span> @item.CreatedDate.ToString("MM/dd/yyyy")</span>
 
                         <!-- Title -->
-                        <h4 class="title"><a href="blog-details.html">If you are going to use a passage.</a></h4>
+                        <h4 class="title"><a href="blog-details.html">@item.Title.Substring(0, (int)Math.Ceiling((item.Title.Length * 0.4))).</a></h4>
 
                         <!-- Decs -->
-                        <p>If you are going to use a passage of Lorem Ipsum, yneed to be sure there isn't anything embarrassing hidden ithe middle text. All the Lorem Ipsum.</p>
+                        <p>@item.Description.Substring(0, (int)Math.Ceiling((item.Description.Length *0.3)))</p>
 
                         <!-- Read More Link -->
-                        <a href="blog-details.html" class="read-more">Read More</a>
+                        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id" class="read-more">Read More</a>
 
                     </div>
 

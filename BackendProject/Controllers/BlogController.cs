@@ -52,9 +52,11 @@ namespace BackendProject.Controllers
             return (int)Math.Ceiling((decimal)(blogCount) / take);
         }
 
-        public async Task<IActionResult> Detail()
+        public async Task<IActionResult> Detail(int id)
         {
-            return View();
+            BlogDetailVM blog = await _blogService.GetByIdAsync(id);
+
+            return View(blog);
         }
     } 
 }

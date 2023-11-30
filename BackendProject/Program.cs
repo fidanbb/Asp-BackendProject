@@ -21,7 +21,8 @@ builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<ILayoutService, LayoutService>();
-
+builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<ITagService, TagService>();
 
 
 var app = builder.Build();

@@ -159,7 +159,67 @@ namespace BackendProject.Data
                           "from the 1914 translation by H. Rackham.",
                           CreatedDate = new DateTime(2018, 12, 10),
                           SoftDeleted = false
-                      }
+                      },
+                       new Blog
+                       {
+                           Id = 4,
+                           Title = "If you are going to use a passage latin at Hampdun.",
+                           Description = "The standard chunk of Lorem Ipsum used since the " +
+                          "1500s is reproduced below for those interested. Sections 1.10.32 " +
+                          "and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also " +
+                          "reproduced in their exact original form, accompanied by English versions " +
+                          "from the 1914 translation by H. Rackham.",
+                           CreatedDate = new DateTime(2023, 02, 15),
+                           SoftDeleted = false
+                       },
+                        new Blog
+                        {
+                            Id = 5,
+                            Title = "If you are going to use a passage latin at Hampdun.",
+                            Description = "The standard chunk of Lorem Ipsum used since the " +
+                          "1500s is reproduced below for those interested. Sections 1.10.32 " +
+                          "and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also " +
+                          "reproduced in their exact original form, accompanied by English versions " +
+                          "from the 1914 translation by H. Rackham.",
+                            CreatedDate = new DateTime(2022, 11, 11),
+                            SoftDeleted = false
+                        },
+                         new Blog
+                         {
+                             Id = 6,
+                             Title = "If you are going to use a passage latin at Hampdun.",
+                             Description = "The standard chunk of Lorem Ipsum used since the " +
+                          "1500s is reproduced below for those interested. Sections 1.10.32 " +
+                          "and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also " +
+                          "reproduced in their exact original form, accompanied by English versions " +
+                          "from the 1914 translation by H. Rackham.",
+                             CreatedDate = new DateTime(2021, 09, 10),
+                             SoftDeleted = false
+                         },
+                          new Blog
+                          {
+                              Id = 7,
+                              Title = "If you are going to use a passage latin at Hampdun.",
+                              Description = "The standard chunk of Lorem Ipsum used since the " +
+                          "1500s is reproduced below for those interested. Sections 1.10.32 " +
+                          "and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also " +
+                          "reproduced in their exact original form, accompanied by English versions " +
+                          "from the 1914 translation by H. Rackham.",
+                              CreatedDate = new DateTime(2019, 11, 11),
+                              SoftDeleted = false
+                          },
+                         new Blog
+                         {
+                             Id = 8,
+                             Title = "If you are going to use a passage latin at Hampdun.",
+                             Description = "The standard chunk of Lorem Ipsum used since the " +
+                          "1500s is reproduced below for those interested. Sections 1.10.32 " +
+                          "and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also " +
+                          "reproduced in their exact original form, accompanied by English versions " +
+                          "from the 1914 translation by H. Rackham.",
+                             CreatedDate = new DateTime(2017, 10, 20),
+                             SoftDeleted = false
+                         }
 
                 );
 
@@ -168,12 +228,34 @@ namespace BackendProject.Data
                 new BlogImage { Id =  1,Image= "1.jpg", BlogId=1,IsMain=true,SoftDeleted=false},
                 new BlogImage { Id = 2, Image = "2.jpg", BlogId = 1, IsMain = false, SoftDeleted = false },
                 new BlogImage { Id = 3, Image = "3.jpg", BlogId = 1, IsMain = false, SoftDeleted = false },
+
                 new BlogImage { Id = 4, Image = "2.jpg", BlogId = 2, IsMain = true, SoftDeleted = false },
                 new BlogImage { Id = 5, Image = "1.jpg", BlogId = 2, IsMain = false, SoftDeleted = false },
                 new BlogImage { Id = 6, Image = "3.jpg", BlogId = 2, IsMain = false, SoftDeleted = false },
+
                 new BlogImage { Id = 7, Image = "3.jpg", BlogId = 3, IsMain = true, SoftDeleted = false },
                 new BlogImage { Id = 8, Image = "1.jpg", BlogId = 3, IsMain = false, SoftDeleted = false },
-                new BlogImage { Id = 9, Image = "2.jpg", BlogId = 3, IsMain = false, SoftDeleted = false }
+                new BlogImage { Id = 9, Image = "2.jpg", BlogId = 3, IsMain = false, SoftDeleted = false },
+
+                new BlogImage { Id = 10, Image = "1.jpg", BlogId = 4,IsMain = true, SoftDeleted = false },
+                new BlogImage { Id = 11, Image = "2.jpg", BlogId = 4, IsMain = false, SoftDeleted = false },
+                new BlogImage { Id = 12, Image = "3.jpg", BlogId = 4, IsMain = false, SoftDeleted = false },
+
+                new BlogImage { Id = 13, Image = "2.jpg", BlogId = 5, IsMain = true, SoftDeleted = false },
+                new BlogImage { Id = 14, Image = "1.jpg", BlogId = 5, IsMain = false, SoftDeleted = false },
+                new BlogImage { Id = 15, Image = "3.jpg", BlogId = 5, IsMain = false, SoftDeleted = false },
+
+                new BlogImage { Id = 16, Image = "3.jpg", BlogId = 6, IsMain = true, SoftDeleted = false },
+                new BlogImage { Id = 17, Image = "1.jpg", BlogId = 6, IsMain = false, SoftDeleted = false },
+                new BlogImage { Id = 18, Image = "2.jpg", BlogId = 6, IsMain = false, SoftDeleted = false },
+
+                new BlogImage { Id = 19, Image = "2.jpg", BlogId = 7, IsMain = true, SoftDeleted = false },
+                new BlogImage { Id = 20, Image = "1.jpg", BlogId = 7, IsMain = false, SoftDeleted = false },
+                new BlogImage { Id = 21, Image = "3.jpg", BlogId = 7, IsMain = false, SoftDeleted = false },
+
+                new BlogImage { Id = 22, Image = "3.jpg", BlogId = 8, IsMain = true, SoftDeleted = false },
+                new BlogImage { Id = 23, Image = "1.jpg", BlogId = 8, IsMain = false, SoftDeleted = false },
+                new BlogImage { Id = 24, Image = "2.jpg", BlogId = 8, IsMain = false, SoftDeleted = false }
                 );
 
 
@@ -189,7 +271,24 @@ namespace BackendProject.Data
                 new BlogTag { Id = 9, BlogId = 3, TagId = 1 },
                 new BlogTag { Id = 10, BlogId = 3, TagId = 2 },
                 new BlogTag { Id = 11, BlogId = 3, TagId = 5 },
-                new BlogTag { Id = 12, BlogId = 3, TagId = 3 }
+                new BlogTag { Id = 12, BlogId = 3, TagId = 3 },
+                new BlogTag { Id = 13, BlogId = 4, TagId = 1 },
+                new BlogTag { Id = 14, BlogId = 4, TagId = 5 },
+                new BlogTag { Id = 15, BlogId = 4, TagId = 6 },
+                new BlogTag { Id = 16, BlogId = 5, TagId = 4 },
+                new BlogTag { Id = 17, BlogId = 5, TagId = 1 },
+                new BlogTag { Id = 18, BlogId = 5, TagId = 4 },
+                new BlogTag { Id = 19, BlogId = 6, TagId = 3 },
+                new BlogTag { Id = 20, BlogId = 6, TagId = 6 },
+                new BlogTag { Id = 21, BlogId = 6, TagId = 1 },
+                new BlogTag { Id = 22, BlogId = 7, TagId = 2 },
+                new BlogTag { Id = 23, BlogId = 7, TagId = 5 },
+                new BlogTag { Id = 24, BlogId = 7, TagId = 3 },
+                new BlogTag { Id = 25, BlogId = 8, TagId = 6 },
+                new BlogTag { Id = 26, BlogId = 8, TagId = 1 },
+                new BlogTag { Id = 27, BlogId = 8, TagId = 2 },
+                new BlogTag { Id = 28, BlogId = 8, TagId = 5 }
+
                 );
 
         }

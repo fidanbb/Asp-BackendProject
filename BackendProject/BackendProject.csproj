@@ -28,6 +28,9 @@
     <None Remove="Views\Shop\" />
     <None Remove="Areas\Admin\ViewModels\Product\" />
     <None Remove="Areas\Admin\ViewModels\Layout\" />
+    <None Remove="Views\Blog\" />
+    <None Remove="Areas\Admin\ViewModels\Blog\" />
+    <None Remove="Areas\Admin\ViewModels\Tag\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -51,6 +54,9 @@
     <Folder Include="Views\Shop\" />
     <Folder Include="Areas\Admin\ViewModels\Product\" />
     <Folder Include="Areas\Admin\ViewModels\Layout\" />
+    <Folder Include="Views\Blog\" />
+    <Folder Include="Areas\Admin\ViewModels\Blog\" />
+    <Folder Include="Areas\Admin\ViewModels\Tag\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />

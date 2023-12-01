@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jA93bjrP4e22HFdaVDHUDggz8GMUlunaxxXPMQe/mb4=",
+  "Hash": "JkrNYtt3Y7lXwuwDGPD+KIY8dQPWPieRxOJeYtubXKo=",
   "Source": "BackendProject",
   "BasePath": "_content/BackendProject",
   "Mode": "Default",
@@ -38571,23 +38571,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/team/4.jpg"
-    },
-    {
-      "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/testimonial/1.jpg",
-      "SourceId": "BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/",
-      "BasePath": "_content/BackendProject",
-      "RelativePath": "img/testimonial/1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/img/testimonial/1.jpg"
     },
     {
       "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/js/ajax-mail.js",

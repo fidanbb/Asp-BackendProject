@@ -2,7 +2,6 @@
 
 
     $(document).on("click", ".show-more button", function () {
-        console.log("salam")
 
         let parent = $(".parent-elem");
         let skipCount = $(parent).children().length;
@@ -55,9 +54,9 @@
 
 
 
-    $(document).on("submit", ".hm-searchbox", function (e) {
+    $(document).on("submit", ".search-form", function (e) {
         e.preventDefault();
-        let value = $(".input-search").val();
+        let value = $(".search-input").val();
         let url = `/shop/Search?searchText=${value}`;
 
         window.location.assign(url);

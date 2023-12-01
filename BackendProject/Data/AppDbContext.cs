@@ -76,8 +76,10 @@ namespace BackendProject.Data
             modelBuilder.Entity<Review>().HasData(
                new Review { Id = 1, Message= "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",CustomerId=1,SoftDeleted = false },
                new Review { Id = 2, Message = "I absolutely loved this product! It exceeded my expectations in every way. The quality is outstanding, and it arrived sooner than expected.", CustomerId = 2, SoftDeleted = false },
-               new Review { Id = 3, Message = "Unfortunately, this item did not meet my expectations. The quality was subpar, and it didn't function as described. I'm quite disappointed with my purchase.", CustomerId = 3, SoftDeleted = false }
-
+               new Review { Id = 3, Message = "Unfortunately, this item did not meet my expectations. The quality was subpar, and it didn't function as described. I'm quite disappointed with my purchase.", CustomerId = 3, SoftDeleted = false },
+               new Review { Id = 4, Message = "I am extremely satisfied with this product! It not only met but exceeded my expectations. The quality is top-notch, and it has made a significant improvement in my daily life.", CustomerId = 2, SoftDeleted = false },
+               new Review { Id = 5, Message = "The product has some great features, but there are a few drawbacks. While it's user-friendly and stylish, the battery life could be better. Overall, it's a good purchase with some room for improvement.", CustomerId = 4, SoftDeleted = false },
+               new Review { Id = 6, Message = "I regret buying this item. It didn't live up to the hype, and the build quality is disappointing. I encountered issues shortly after purchase, and customer support was not helpful. Would not recommend..", CustomerId = 5, SoftDeleted = false }
 
 
                );
@@ -85,7 +87,9 @@ namespace BackendProject.Data
             modelBuilder.Entity<Customer>().HasData(
                 new Customer { Id = 1,FullName="Betty More", Image= "1.jpg",SoftDeleted=false },
                 new Customer { Id = 2, FullName = "Andy Morgan", Image = "1.jpg", SoftDeleted = false },
-                new Customer { Id = 3, FullName = "Sandra Black", Image = "1.jpg", SoftDeleted = false }
+                new Customer { Id = 3, FullName = "Sandra Black", Image = "1.jpg", SoftDeleted = false },
+                   new Customer { Id = 4, FullName = "Mark White", Image = "1.jpg", SoftDeleted = false },
+                new Customer { Id = 5, FullName = "Lucy Western", Image = "1.jpg", SoftDeleted = false }
                 );
 
             modelBuilder.Entity<Category>().HasData(

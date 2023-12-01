@@ -9069,10 +9069,6 @@
       "PackagePath": "staticwebassets/img/team/4.jpg"
     },
     {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/testimonial/1.jpg",
-      "PackagePath": "staticwebassets/img/testimonial/1.jpg"
-    },
-    {
       "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/js/ajax-mail.js",
       "PackagePath": "staticwebassets/js/ajax-mail.js"
     },

@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using BackendProject.Areas.Admin.ViewModels.Slider;
 using BackendProject.Areas.Admin.ViewModels.Team;
 using BackendProject.Data;
 using BackendProject.Helpers.Extentions;
@@ -56,9 +57,41 @@ namespace BackendProject.Services
             }
         }
 
-        public Task EditAsync(TeamEditVM team)
+        public async Task EditAsync(TeamEditVM team)
         {
-            throw new NotImplementedException();
+            string fileName;
+
+            if (team.Photo is not null)
+            {
+                string oldPath = _env.GetFilePath("img/team", team.Image);
+                fileName = $"{Guid.NewGuid()}-{team.Photo.FileName}";
+                string newPath = _env.GetFilePath("img/team", fileName);
+                if (File.Exists(oldPath))
+                {
+                    File.Delete(oldPath);
+                }
+
+                await team.Photo.SaveFileAsync(newPath);
+
+            }
+            else
+            {
+                fileName = team.Image;
+            }
+
+
+
+            Team dbTeam = await _context.Teams.AsNoTracking().FirstOrDefaultAsync(m => m.Id == team.Id);
+
+
+            _mapper.Map(team, dbTeam);
+
+            dbTeam.Image = fileName;
+
+
+            _context.Teams.Update(dbTeam);
+
+            await _context.SaveChangesAsync();
         }
 
         public async Task<List<TeamVM>> GetAllAsync()
@@ -66,7 +99,7 @@ namespace BackendProject.Services
             return _mapper.Map<List<TeamVM>>(await _context.Teams.ToListAsync());
         }
 
-        public async Task<TeamVM> GetByIdWithoutTracking(int id)
+        public async Task<TeamVM> GetByIdWithoutTrackingAsync(int id)
         {
             return _mapper.Map<TeamVM>(await _context.Teams.AsNoTracking().FirstOrDefaultAsync(m=>m.Id==id));
         }

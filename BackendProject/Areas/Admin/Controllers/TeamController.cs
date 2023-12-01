@@ -42,7 +42,7 @@ namespace BackendProject.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            TeamVM dbTeam = await _teamService.GetByIdWithoutTracking((int)id);
+            TeamVM dbTeam = await _teamService.GetByIdWithoutTrackingAsync((int)id);
 
             if (dbTeam is null) return NotFound();
 
@@ -97,7 +97,54 @@ namespace BackendProject.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id is null) return BadRequest();
 
+            TeamVM dbTeam = await _teamService.GetByIdWithoutTrackingAsync((int)id);
+
+            if (dbTeam is null) return NotFound();
+
+            TeamEditVM team = _mapper.Map<TeamEditVM>(dbTeam);
+
+
+            return View(team);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, TeamEditVM request)
+        {
+            if (id is null) return BadRequest();
+
+            TeamVM dbTeam = await _teamService.GetByIdWithoutTrackingAsync((int)id);
+
+            if (dbTeam is null) return NotFound();
+
+            request.Image = dbTeam.Image;
+
+            if (!ModelState.IsValid)
+            {
+                return View(request);
+            }
+            if (request.Photo is not null)
+            {
+                if (!request.Photo.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError("Photo", "File can be only image format");
+                    return View(request);
+                }
+                if (!request.Photo.CheckFileSize(200))
+                {
+                    ModelState.AddModelError("Photo", "File size can be max 200 kb");
+                    return View(request);
+                }
+            }
+            await _teamService.EditAsync(request);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
 

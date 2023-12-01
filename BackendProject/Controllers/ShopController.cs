@@ -7,6 +7,7 @@ using BackendProject.Helpers;
 using BackendProject.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -39,6 +40,12 @@ namespace BackendProject.Controllers
         {
             int productCount = await _productService.GetCountAsync();
             return (int)Math.Ceiling((decimal)(productCount) / take);
+        }
+
+        public async Task<IActionResult> Search(string searchText)
+        {
+
+            return View(await _productService.SearchAsync(searchText));
         }
     }
 }

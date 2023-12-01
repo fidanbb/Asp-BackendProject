@@ -42,6 +42,18 @@ namespace BackendProject.Services
             return _mapper.Map<List<ProductVM>>(products);
         }
 
+        public async Task<List<ProductVM>> SearchAsync(string searchText)
+        {
+            var dbProducts = await _context.Products.Include(m => m.Images)
+                                                  .Include(m => m.Category)?
+                                                  .OrderByDescending(m => m.Id)
+                                                  .Where(m=> m.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+                                                  .Take(6)
+                                                  .ToListAsync();
+
+            return _mapper.Map<List<ProductVM>>(dbProducts);
+        }
+
         public async Task<List<ProductVM>> ShowMoreOrLess(int take, int skip)
         {
             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Category)

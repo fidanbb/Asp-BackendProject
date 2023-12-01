@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/Areas/Admin/Views/About/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWJvdXQvRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/Areas/Admin/Views/About/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWJvdXQvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/Areas/Admin/Views/About/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWJvdXQvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/Areas/Admin/Views/Advert/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWR2ZXJ0L0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

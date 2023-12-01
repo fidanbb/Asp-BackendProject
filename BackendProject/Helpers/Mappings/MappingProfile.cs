@@ -56,6 +56,9 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<SubscribeCreateVM, Subscribe>();
             CreateMap<ContactInfo, ContactInfoVM>();
             CreateMap<ContactInfoEditVM, ContactInfo>();
+            CreateMap<AboutEditVM, About>();
+            CreateMap<AboutVM, AboutEditVM>();
+
 
         }
     }

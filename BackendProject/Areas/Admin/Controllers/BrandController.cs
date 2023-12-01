@@ -33,9 +33,15 @@ namespace BackendProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Detail(int id)
+        public async Task<IActionResult> Detail(int? id)
         {
-            return View(await _brandService.GetByIdAsync(id));
+            if (id is null) return BadRequest();
+
+            BrandVM dbBrand = await _brandService.GetByIdAsync((int)id);
+
+            if (dbBrand is null) return NotFound();
+
+            return View(dbBrand);
         }
 
         [HttpGet]

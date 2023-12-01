@@ -43,7 +43,12 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<AdvertCreateVM, Advert>();
             CreateMap<AdvertVM, AdvertEditVM>();
             CreateMap<AdvertEditVM, Advert>();
-
+            CreateMap<SliderCreateVM, Slider>();
+            CreateMap<SliderEditVM, Slider>();
+            CreateMap<SliderVM, SliderEditVM>();
+            CreateMap<TeamCreateVM, Team>();
+            CreateMap<TeamEditVM, Team>();
+            CreateMap<TeamVM, TeamEditVM>();
         }
     }
 }

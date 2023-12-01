@@ -1,11 +1,11 @@
-﻿@model List<SliderVM>
+﻿@model List<TeamVM>
 
 @{
     ViewData["Title"] = "Index";
 }
 
 <div class="container" style="margin-left:30px">
-    <h1 class="text-center mt-3 mb-3">Sliders</h1>
+    <h1 class="text-center mt-3 mb-3">Team</h1>
     <a class="btn btn-success text-white" asp-action="Create">Create</a>
     <div class="table-responsive">
         <table class="table table-striped">
@@ -15,43 +15,39 @@
                         Image
                     </th>
                     <th>
-                        Header
+                        FullName
                     </th>
                     <th>
-                        Title
+                        Position
                     </th>
-                    <th>
-                        Description
-                    </th>
+
                     <th>
                         Operations
                     </th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var slider in Model)
+                @foreach (var team in Model)
                 {
                     <tr>
                         <td class="py-1">
-                            <img src="~/img/hero/@slider.Image" alt="image" />
+                            <img src="~/img/team/@team.Image" alt="image" />
                         </td>
 
                         <td class="py-1">
-                            @slider.Header
+                            @team.FullName
                         </td>
 
                         <td class="py-1">
-                            @slider.Title
+                            @team.Position
                         </td>
 
-                        <td class="py-1">
-                            @slider.Description.Substring(0, (int)Math.Ceiling(slider.Description.Length * 0.3))
-                        </td>
+           
 
                         <td>
-                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@slider.Id">Detail</a>
-                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@slider.Id">Edit</a>
-                            <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@slider.Id">
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@team.Id">Detail</a>
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@team.Id">Edit</a>
+                            <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@team.Id">
                                 <button type="submit" class="btn btn-outline-danger">Delete</button>
                             </form>
                         </td>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using BackendProject.Areas.Admin.ViewModels.Slider;
 using BackendProject.Data;
 using BackendProject.Helpers.Extentions;
@@ -17,13 +18,17 @@ namespace BackendProject.Areas.Admin.Controllers
     {
         private readonly ISliderService _sliderService;
         private readonly IWebHostEnvironment _env;
+        private readonly IMapper _mapper;
 
 
         public SliderController(ISliderService sliderService,
-                                IWebHostEnvironment env)
+                                IWebHostEnvironment env,
+                                IMapper mapper)
+                                
         {
             _sliderService = sliderService;
             _env = env;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -80,6 +85,64 @@ namespace BackendProject.Areas.Admin.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _sliderService.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            SliderVM dbSlider = await _sliderService.GetByIdWithOutTrackingAsync((int)id);
+
+            if (dbSlider is null) return NotFound();
+
+            SliderEditVM slider = _mapper.Map<SliderEditVM>(dbSlider);
+            
+
+            return View(slider);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, SliderEditVM request)
+        {
+            if (id is null) return BadRequest();
+
+            SliderVM dbSlider = await _sliderService.GetByIdWithOutTrackingAsync((int)id);
+
+            if (dbSlider is null) return NotFound();
+            request.Image = dbSlider.Image;
+
+            if (!ModelState.IsValid)
+            {
+                return View(request);
+            }
+            if (request.Photo is not null)
+            {
+                if (!request.Photo.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError("Photo", "File can be only image format");
+                    return View(request);
+                }
+                if (!request.Photo.CheckFileSize(200))
+                {
+                    ModelState.AddModelError("Photo", "File size can be max 200 kb");
+                    return View(request);
+                }
+            }
+            await _sliderService.EditAsync(request);
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
 

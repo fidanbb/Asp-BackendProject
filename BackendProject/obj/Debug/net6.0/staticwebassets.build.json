@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bVKwyjYCz8nNoDXjrPfv0w2Q0yFEY6rE5uN9MdSU5/Y=",
+  "Hash": "jA93bjrP4e22HFdaVDHUDggz8GMUlunaxxXPMQe/mb4=",
   "Source": "BackendProject",
   "BasePath": "_content/BackendProject",
   "Mode": "Default",
@@ -38197,6 +38197,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/hero/2.jpg"
+    },
+    {
+      "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/hero/df4727fd-a186-490a-8da5-7316535c8c20-3.jpg",
+      "SourceId": "BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/",
+      "BasePath": "_content/BackendProject",
+      "RelativePath": "img/hero/df4727fd-a186-490a-8da5-7316535c8c20-3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/hero/df4727fd-a186-490a-8da5-7316535c8c20-3.jpg"
     },
     {
       "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/icon/select-arrow-down.png",

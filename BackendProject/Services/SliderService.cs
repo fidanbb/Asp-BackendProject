@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using BackendProject.Areas.Admin.ViewModels.Advert;
 using BackendProject.Areas.Admin.ViewModels.Slider;
 using BackendProject.Data;
 using BackendProject.Helpers.Extentions;
@@ -56,9 +57,41 @@ namespace BackendProject.Services
             }
         }
 
-        public Task EditAsync(SliderEditVM slider)
+        public async Task EditAsync(SliderEditVM slider)
         {
-            throw new NotImplementedException();
+            string fileName;
+
+            if (slider.Photo is not null)
+            {
+                string oldPath = _env.GetFilePath("img/hero", slider.Image);
+                fileName = $"{Guid.NewGuid()}-{slider.Photo.FileName}";
+                string newPath = _env.GetFilePath("img/hero", fileName);
+                if (File.Exists(oldPath))
+                {
+                    File.Delete(oldPath);
+                }
+
+                await slider.Photo.SaveFileAsync(newPath);
+
+            }
+            else
+            {
+                fileName = slider.Image;
+            }
+
+
+
+            Slider dbSlider = await _context.Sliders.AsNoTracking().FirstOrDefaultAsync(m => m.Id == slider.Id);
+
+
+            _mapper.Map(slider, dbSlider);
+
+            dbSlider.Image = fileName;
+
+
+            _context.Sliders.Update(dbSlider);
+
+            await _context.SaveChangesAsync();
         }
 
         public async Task<List<SliderVM>> GetAllAsync()

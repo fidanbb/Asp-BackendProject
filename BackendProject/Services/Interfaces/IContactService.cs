@@ -9,7 +9,10 @@ namespace BackendProject.Services.Interfaces
 		Task<List<ContactMessageVM>> GetAllMessagesAsync();
 		Task CreateAsync(ContactMessageCreateVM contact);
 		Task DeleteAsync(int id);
-		Task<ContactMessageVM> GetByIdWithoutTracking(int id);
+		Task<ContactMessageVM> GetMessageByIdWithoutTracking(int id);
+		Task<ContactInfoVM> GetInfoAsync();
+		Task EditInfoAsync(ContactInfoEditVM contactInfo);
+		Task<ContactInfoVM> GetInfoByIdWithoutTracking(int id);
 
 	}
 }

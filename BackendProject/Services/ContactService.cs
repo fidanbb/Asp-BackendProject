@@ -2,6 +2,7 @@
 using AutoMapper;
 using BackendProject.Areas.Admin.ViewModels.Advert;
 using BackendProject.Areas.Admin.ViewModels.Contact;
+using BackendProject.Areas.Admin.ViewModels.Slider;
 using BackendProject.Data;
 using BackendProject.Models;
 using BackendProject.Services.Interfaces;
@@ -42,7 +43,7 @@ namespace BackendProject.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task<ContactMessageVM> GetByIdWithoutTracking(int id)
+        public async Task<ContactMessageVM> GetMessageByIdWithoutTracking(int id)
         {
             return _mapper.Map<ContactMessageVM>(await _context.ContactMessages.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id));
 
@@ -62,7 +63,7 @@ namespace BackendProject.Services
 
             ContactVM model = new()
             {
-                Description=contact.Descriptiom,
+                Descriptiom=contact.Descriptiom,
                 Email = settingDatas["Email"],
                 Phone = settingDatas["Phone"],
                 Address = settingDatas["Address"]
@@ -71,9 +72,31 @@ namespace BackendProject.Services
             return model;
         }
 
+        public async Task<ContactInfoVM> GetInfoAsync()
+        {
+            return _mapper.Map<ContactInfoVM>(await _context.ContactInfos.FirstOrDefaultAsync());
+        }
 
-       
+        public async Task EditInfoAsync(ContactInfoEditVM contactInfo)
+        {
 
+     
+
+            ContactInfo dbContactInfo = await _context.ContactInfos.AsNoTracking().FirstOrDefaultAsync(m => m.Id == contactInfo.Id);
+
+
+            _mapper.Map(contactInfo, dbContactInfo);
+
+
+            _context.ContactInfos.Update(dbContactInfo);
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<ContactInfoVM> GetInfoByIdWithoutTracking(int id)
+        {
+            return _mapper.Map<ContactInfoVM>(await _context.ContactInfos.AsNoTracking().FirstOrDefaultAsync(m=>m.Id==id));
+        }
     }
 }
 

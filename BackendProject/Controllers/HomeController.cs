@@ -3,7 +3,9 @@ using BackendProject.Areas.Admin.ViewModels.Blog;
 using BackendProject.Areas.Admin.ViewModels.Product;
 using BackendProject.Areas.Admin.ViewModels.Review;
 using BackendProject.Areas.Admin.ViewModels.Slider;
+using BackendProject.Areas.Admin.ViewModels.Subscribe;
 using BackendProject.Models;
+using BackendProject.Services;
 using BackendProject.Services.Interfaces;
 using BackendProject.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -19,18 +21,21 @@ namespace BackendProject.Controllers
         private readonly IReviewService _reviewService;
         private readonly IProductService _productService;
         private readonly IBlogService _blogService;
+        private readonly ISubscribeService _subscribeService;
 
         public HomeController(ISliderService sliderService,
                               IAdvertService advertService,
                               IReviewService reviewService,
                               IProductService productservice,
-                              IBlogService blogService)
+                              IBlogService blogService,
+                              ISubscribeService subscribeService)
         {
             _sliderService = sliderService;
             _advertService = advertService;
             _reviewService = reviewService;
             _productService = productservice;
             _blogService = blogService;
+            _subscribeService = subscribeService;
         }
 
         public async Task< IActionResult> Index()
@@ -65,6 +70,14 @@ namespace BackendProject.Controllers
             return PartialView("_ProductsPartial", products);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateSubscribe(SubscribeCreateVM subscribe)
+        {
+
+            await _subscribeService.CreateAsync(subscribe);
+            return RedirectToAction("Index", "Home");
+        }
 
     }
 }

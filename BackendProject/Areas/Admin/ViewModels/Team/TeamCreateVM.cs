@@ -11,6 +11,7 @@ namespace BackendProject.Areas.Admin.ViewModels.Team
         public string Position { get; set; }
         [Required]
         public IFormFile Photo { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }
 

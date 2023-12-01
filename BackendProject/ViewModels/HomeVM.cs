@@ -4,6 +4,7 @@ using BackendProject.Areas.Admin.ViewModels.Blog;
 using BackendProject.Areas.Admin.ViewModels.Product;
 using BackendProject.Areas.Admin.ViewModels.Review;
 using BackendProject.Areas.Admin.ViewModels.Slider;
+using BackendProject.Areas.Admin.ViewModels.Subscribe;
 
 namespace BackendProject.ViewModels
 {
@@ -14,6 +15,7 @@ namespace BackendProject.ViewModels
 		public List<ReviewVM> Reviews { get; set; }
 		public List<ProductVM> Products { get; set; }
 		public List<BlogVM> Blogs { get; set; }
-	}
+        public SubscribeCreateVM Subscribe { get; set; }
+    }
 }
 

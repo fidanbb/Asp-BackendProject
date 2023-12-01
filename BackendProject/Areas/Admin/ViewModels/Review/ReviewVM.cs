@@ -7,6 +7,7 @@ namespace BackendProject.Areas.Admin.ViewModels.Review
         public string FullName { get; set; }
 		public string Image { get; set; }
 		public string Message { get; set; }
-	}
+        public DateTime CreatedDate { get; set; }
+    }
 }
 

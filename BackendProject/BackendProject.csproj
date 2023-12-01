@@ -44,6 +44,8 @@
     <None Remove="Areas\Admin\Views\Slider\" />
     <None Remove="Areas\Admin\Views\Team\" />
     <None Remove="Areas\Admin\Views\Contact\" />
+    <None Remove="Areas\Admin\ViewModels\Subscribe\" />
+    <None Remove="Areas\Admin\Views\Subscribe\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -83,6 +85,8 @@
     <Folder Include="Areas\Admin\Views\Slider\" />
     <Folder Include="Areas\Admin\Views\Team\" />
     <Folder Include="Areas\Admin\Views\Contact\" />
+    <Folder Include="Areas\Admin\ViewModels\Subscribe\" />
+    <Folder Include="Areas\Admin\Views\Subscribe\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />

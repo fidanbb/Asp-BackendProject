@@ -24,6 +24,9 @@
                         Description
                     </th>
                     <th>
+                        CreatedDate
+                    </th>
+                    <th>
                         Operations
                     </th>
                 </tr>
@@ -44,8 +47,13 @@
                             @slider.Title
                         </td>
 
+
                         <td class="py-1">
                             @slider.Description.Substring(0, (int)Math.Ceiling(slider.Description.Length * 0.3))
+                        </td>
+
+                        <td>
+                            @slider.CreatedDate.ToString("MM/dd/yyyy")
                         </td>
 
                         <td>

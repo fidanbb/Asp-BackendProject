@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BackendProject.Areas.Admin.ViewModels.Brand;
+using BackendProject.Areas.Admin.ViewModels.Contact;
 using BackendProject.Services;
 using BackendProject.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -32,6 +34,19 @@ namespace BackendProject.Areas.Admin.Controllers
         {
             await _contactService.DeleteAsync(id);
             return RedirectToAction(nameof(MessageIndex));
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> MessageDetail(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            ContactMessageVM dbMessage = await _contactService.GetByIdWithoutTracking((int)id);
+
+            if (dbMessage is null) return NotFound();
+
+            return View(dbMessage);
         }
 
 

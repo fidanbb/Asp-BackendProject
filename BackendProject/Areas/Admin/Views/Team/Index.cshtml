@@ -22,6 +22,10 @@
                     </th>
 
                     <th>
+                        CreatedDate
+                    </th>
+
+                    <th>
                         Operations
                     </th>
                 </tr>
@@ -42,7 +46,9 @@
                             @team.Position
                         </td>
 
-           
+                        <td>
+                            @team.CreatedDate.ToString("MM/dd/yyyy")
+                        </td>
 
                         <td>
                             <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@team.Id">Detail</a>

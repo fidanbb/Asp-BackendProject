@@ -14,7 +14,9 @@
                     <th>
                         Image
                     </th>
-                   
+                   <th>
+                       CreatedDate
+                   </th>
                     <th>
                         Operations
                     </th>
@@ -26,6 +28,9 @@
                     <tr>
                         <td class="py-1">
                             <img src="~/img/client/@brand.Image" alt="image" />
+                        </td>
+                        <td>
+                            @brand.CreatedDate.ToString("MM/dd/yyyy")
                         </td>
                         <td>
                             <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@brand.Id">Detail</a>

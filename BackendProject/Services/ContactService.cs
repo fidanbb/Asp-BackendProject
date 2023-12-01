@@ -42,6 +42,12 @@ namespace BackendProject.Services
             await _context.SaveChangesAsync();
         }
 
+        public async Task<ContactMessageVM> GetByIdWithoutTracking(int id)
+        {
+            return _mapper.Map<ContactMessageVM>(await _context.ContactMessages.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id));
+
+        }
+
         public async Task<List<ContactMessageVM>> GetAllMessagesAsync()
         {
             return _mapper.Map<List<ContactMessageVM>>(await _context.ContactMessages.ToListAsync());

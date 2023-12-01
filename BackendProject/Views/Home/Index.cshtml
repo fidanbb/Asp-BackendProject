@@ -4,6 +4,21 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+    .subscribe-input {
+        height: 45px;
+        width: 364px;
+        float: left;
+        border: none;
+        background-color: #ffffff;
+        font-size: 14px;
+        line-height: 25px;
+        padding: 10px 20px;
+        color: #a3a3a3;
+    }
+</style>
+
+
 <!-- Hero Slider Start-->
 <div class="hero-slider section fix">
 
@@ -29,10 +44,7 @@
 
 
 </div>
-    <!-- Hero Slider End-->
-
-
-
+<!-- Hero Slider End-->
 <!-- Banner Section Start-->
 <div class="banner-section section pt-120">
     <div class="container">
@@ -163,10 +175,10 @@
             <div class="text-center col">
 
                 <!-- Newsletter Form -->
-                <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate" target="_blank" novalidate>
+                <form asp-action="CreateSubscribe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form validate">
                     <div id="mc_embed_signup_scroll">
-                        <label for="mce-EMAIL" class="d-none">Subscribe to our mailing list</label>
-                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address" required>
+                        <label asp-for="@Model.Subscribe.Email" class="d-none">Subscribe to our mailing list</label>
+                        <input asp-for="@Model.Subscribe.Email" class="email subscribe-input" id="mce-EMAIL" placeholder="Your email address">
                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
                         <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">subscribe</button>
@@ -197,7 +209,7 @@
                 <div class="blog-item col-lg-4 col-md-6 col-12 mb-60">
 
                     <!-- Image -->
-                    <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id"  class="image"><img src="~/img/blog/@item.Image" alt="blog"></a>
+                    <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id" class="image"><img src="~/img/blog/@item.Image" alt="blog"></a>
 
                     <!-- Content -->
                     <div class="content fix">
@@ -209,7 +221,7 @@
                         <h4 class="title"><a href="blog-details.html">@item.Title.Substring(0, (int)Math.Ceiling((item.Title.Length * 0.4))).</a></h4>
 
                         <!-- Decs -->
-                        <p>@item.Description.Substring(0, (int)Math.Ceiling((item.Description.Length *0.3)))</p>
+                        <p>@item.Description.Substring(0, (int)Math.Ceiling((item.Description.Length * 0.3)))</p>
 
                         <!-- Read More Link -->
                         <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id" class="read-more">Read More</a>
@@ -228,5 +240,5 @@
 
 
 @section script{
-<script src="~/product.js"></script>
+    <script src="~/product.js"></script>
 }

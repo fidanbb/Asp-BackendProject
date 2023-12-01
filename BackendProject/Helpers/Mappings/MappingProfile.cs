@@ -9,6 +9,7 @@ using BackendProject.Areas.Admin.ViewModels.Product;
 using BackendProject.Areas.Admin.ViewModels.Review;
 using BackendProject.Areas.Admin.ViewModels.Slider;
 using BackendProject.Areas.Admin.ViewModels.Social;
+using BackendProject.Areas.Admin.ViewModels.Subscribe;
 using BackendProject.Areas.Admin.ViewModels.Tag;
 using BackendProject.Areas.Admin.ViewModels.Team;
 using BackendProject.Models;
@@ -51,6 +52,10 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<TeamVM, TeamEditVM>();
             CreateMap<ContactMessage, ContactMessageVM>();
             CreateMap<ContactMessageCreateVM, ContactMessage>();
+            CreateMap<Subscribe, SubscribeVM>();
+            CreateMap<SubscribeCreateVM, Subscribe>();
+
+
         }
     }
 }

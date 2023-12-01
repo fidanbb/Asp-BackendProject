@@ -30,6 +30,8 @@ builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<ISocialService, SocialService>();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IDirectionService, DirectionService>();
+builder.Services.AddScoped<ISubscribeService, SubscribeService>();
+
 #endregion
 
 

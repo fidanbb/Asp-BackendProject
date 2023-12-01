@@ -5,8 +5,7 @@
 }
 
 <div class="container" style="margin-left:30px">
-    <h1 class="text-center mt-3 mb-3">Brands</h1>
-    <a class="btn btn-success text-white" asp-action="Create">Create</a>
+    <h1 class="text-center mt-3 mb-3">Contact Messages</h1>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -19,6 +18,9 @@
                     </th>
                     <th>
                         Message
+                    </th>
+                    <th>
+                        CreatedDate
                     </th>
                     <th>
                         Operations
@@ -36,11 +38,15 @@
                             @message.Email
                         </td>
                         <td class="py-1">
-                            @message.Message
+                            @message.Message.Substring(0, (int)Math.Ceiling(message.Message.Length * 0.3))
+                        </td>
+                        <td>
+                            @message.CreatedDate.ToString("MM/dd/yyyy")
                         </td>
                         <td>
 
                             <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@message.Id">
+                                <a class="btn btn-outline-info" asp-action="MessageDetail" asp-route-id="@message.Id">Detail</a>
                                 <button type="submit" class="btn btn-outline-danger">Delete</button>
                             </form>
                         </td>

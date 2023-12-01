@@ -8,7 +8,8 @@ namespace BackendProject.ViewModels
 	{
 		public ContactVM Contact { get; set; }
 		public List<SocialVM> Socials { get; set; }
-		
+		public ContactMessageCreateVM NewContact { get; set; }
+
 	}
 }
 

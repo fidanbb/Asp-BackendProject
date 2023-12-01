@@ -49,6 +49,8 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<TeamCreateVM, Team>();
             CreateMap<TeamEditVM, Team>();
             CreateMap<TeamVM, TeamEditVM>();
+            CreateMap<ContactMessage, ContactMessageVM>();
+            CreateMap<ContactMessageCreateVM, ContactMessage>();
         }
     }
 }

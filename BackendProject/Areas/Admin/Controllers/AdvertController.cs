@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using BackendProject.Areas.Admin.ViewModels.Advert;
 using BackendProject.Areas.Admin.ViewModels.Brand;
 using BackendProject.Helpers.Extentions;
@@ -19,12 +20,15 @@ namespace BackendProject.Areas.Admin.Controllers
     {
         private readonly IAdvertService _advertService;
         private readonly IDirectionService _directionService;
+        private readonly IMapper _mapper;
 
         public AdvertController(IAdvertService advertService,
-                                IDirectionService directionService)
+                                IDirectionService directionService,
+                                IMapper mapper)
         {
             _advertService = advertService;
             _directionService = directionService;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -87,6 +91,71 @@ namespace BackendProject.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
 
         }
+
+        [HttpGet]
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            ViewBag.directions = await GetDirectionsAsync();
+
+            if (id is null) return BadRequest();
+
+            AdvertVM dbAdvert = await _advertService.GetByIdWithIncludeAsync((int)id);
+
+            if (dbAdvert is null) return NotFound();
+
+            AdvertEditVM advert = _mapper.Map<AdvertEditVM>(dbAdvert);
+
+            return View(advert);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> Edit(int? id,AdvertEditVM request)
+        {
+            ViewBag.directions = await GetDirectionsAsync();
+
+            if (id is null) return BadRequest();
+
+            AdvertVM dbAdvert = await _advertService.GetByIdWithoutTracking((int)id);
+
+            if (dbAdvert is null) return NotFound();
+
+            request.Image = dbAdvert.Image;
+
+            if (!ModelState.IsValid)
+            {
+                return View(request);
+            }
+
+            if (request.Photo is null)
+            {
+                await _advertService.EditAsync(request);
+                return RedirectToAction(nameof(Index));
+            }
+
+
+            if (!request.Photo.CheckFileType("image/"))
+            {
+                ModelState.AddModelError("Photo", "File can be only image format");
+                return View(request);
+            }
+
+            if (!request.Photo.CheckFileSize(200))
+            {
+                ModelState.AddModelError("Photo", "File size can be max 200 kb");
+                return View(request);
+            }
+
+
+            await _advertService.EditAsync(request);
+
+            return RedirectToAction(nameof(Index));
+
+        }
+
+
 
         private async Task<SelectList> GetDirectionsAsync()
         {

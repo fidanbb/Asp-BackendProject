@@ -41,7 +41,8 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<ContactInfo, ContactVM>();
             CreateMap<Direction, DirectionVM>();
             CreateMap<AdvertCreateVM, Advert>();
-
+            CreateMap<AdvertVM, AdvertEditVM>();
+            CreateMap<AdvertEditVM, Advert>();
 
         }
     }

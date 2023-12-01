@@ -41,6 +41,7 @@
     <None Remove="Areas\Admin\Views\Brand\" />
     <None Remove="Helpers\Extentions\" />
     <None Remove="Areas\Admin\Views\Advert\" />
+    <None Remove="Areas\Admin\Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -77,6 +78,7 @@
     <Folder Include="Areas\Admin\Views\Brand\" />
     <Folder Include="Helpers\Extentions\" />
     <Folder Include="Areas\Admin\Views\Advert\" />
+    <Folder Include="Areas\Admin\Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />

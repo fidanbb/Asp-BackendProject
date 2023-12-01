@@ -10,6 +10,8 @@ namespace BackendProject.Services.Interfaces
         Task<AdvertVM> GetByIdWithIncludeAsync(int id);
 		Task CreateAsync(AdvertCreateVM advert);
 		Task DeleteAsync(int id);
+		Task EditAsync(AdvertEditVM advert);
+		Task<AdvertVM> GetByIdWithoutTracking(int id);
 	}
 }
 

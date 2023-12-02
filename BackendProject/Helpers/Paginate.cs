@@ -14,7 +14,13 @@ namespace BackendProject.Helpers
             TotalPage = totalPage;
         }
 
-       
+        public bool HasPrevious
+        {
+            get
+            {
+                return CurrentPage>1;
+            }
+        }
 
         public bool HasNext
         {

@@ -4,6 +4,7 @@ using BackendProject.Areas.Admin.ViewModels.About;
 using BackendProject.Areas.Admin.ViewModels.Advert;
 using BackendProject.Areas.Admin.ViewModels.Blog;
 using BackendProject.Areas.Admin.ViewModels.Brand;
+using BackendProject.Areas.Admin.ViewModels.Category;
 using BackendProject.Areas.Admin.ViewModels.Contact;
 using BackendProject.Areas.Admin.ViewModels.Customer;
 using BackendProject.Areas.Admin.ViewModels.Product;
@@ -62,8 +63,9 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<Customer, CustomerVM>();
             CreateMap<TagCreateVM, Tag>();
             CreateMap<TagEditVM, Tag>();
-
-
+            CreateMap<Category, CategoryVM>();
+            CreateMap<CategoryEditVM, Category>();
+            CreateMap<CategoryCreateVM, Category>();
 
         }
     }

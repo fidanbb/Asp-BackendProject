@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BackendProject.Areas.Admin.ViewModels.Category;
 using BackendProject.Areas.Admin.ViewModels.Tag;
 using BackendProject.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -11,20 +12,20 @@ using Microsoft.AspNetCore.Mvc;
 namespace BackendProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class TagController : Controller
+    public class CategoryController : Controller
     {
-        private readonly ITagService _tagService;
+        private readonly ICategoryService _categoryService;
 
-        public TagController(ITagService tagService)
+        public CategoryController(ICategoryService categoryService)
         {
-            _tagService = tagService;
+            _categoryService = categoryService;
         }
 
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _tagService.GetAllAsync());
+            return View(await _categoryService.GetAllAsync());
         }
 
         [HttpGet]
@@ -33,11 +34,11 @@ namespace BackendProject.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            TagVM dbTag = await _tagService.GetByIdWithoutTrackingAsync((int)id);
+            CategoryVM dbCategory = await _categoryService.GetByIdWithoutTrackingAsync((int)id);
 
-            if (dbTag is null) return NotFound();
+            if (dbCategory is null) return NotFound();
 
-            return View(dbTag);
+            return View(dbCategory);
         }
 
         [HttpGet]
@@ -49,25 +50,25 @@ namespace BackendProject.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Create(TagCreateVM request)
+        public async Task<IActionResult> Create(CategoryCreateVM request)
         {
-          
+
 
             if (!ModelState.IsValid)
             {
                 return View();
             }
 
-            TagVM existTag = await _tagService.GetByNameWithoutTrackingAsync(request.Name);
+            CategoryVM existCategory = await _categoryService.GetByNameWithoutTrackingAsync(request.Name);
 
-            if(existTag != null)
+            if (existCategory != null)
             {
                 ModelState.AddModelError("Name", "This Tag already exists");
                 return View();
             }
 
 
-            await _tagService.CreateAsync(request);
+            await _categoryService.CreateAsync(request);
 
             return RedirectToAction(nameof(Index));
         }
@@ -78,7 +79,7 @@ namespace BackendProject.Areas.Admin.Controllers
         {
 
 
-            await _tagService.DeleteAsync(id);
+            await _categoryService.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
@@ -88,26 +89,26 @@ namespace BackendProject.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            TagVM dbTag = await _tagService.GetByIdWithoutTrackingAsync((int)id);
+            CategoryVM dbCategory = await _categoryService.GetByIdWithoutTrackingAsync((int)id);
 
-            if (dbTag is null) return NotFound();
+            if (dbCategory is null) return NotFound();
 
-            return View(new TagEditVM
+            return View(new CategoryEditVM
             {
-                Name=dbTag.Name
+                Name = dbCategory.Name
             });
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Edit(int? id, TagEditVM request)
+        public async Task<IActionResult> Edit(int? id, CategoryEditVM request)
         {
             if (id is null) return BadRequest();
 
-            TagVM dbTag = await _tagService.GetByIdWithoutTrackingAsync((int)id);
+            CategoryVM dbCategory = await _categoryService.GetByIdWithoutTrackingAsync((int)id);
 
-            if (dbTag is null) return NotFound();
+            if (dbCategory is null) return NotFound();
 
 
             if (!ModelState.IsValid)
@@ -115,15 +116,14 @@ namespace BackendProject.Areas.Admin.Controllers
                 return View();
             }
 
-            TagVM existTag = await _tagService.GetByNameWithoutTrackingAsync(request.Name);
+            CategoryVM existCategory = await _categoryService.GetByNameWithoutTrackingAsync(request.Name);
 
-           
 
-            if (existTag != null)
+            if (existCategory != null)
             {
-                if (existTag.Id == request.Id)
+                if (existCategory.Id == request.Id)
                 {
-                    await _tagService.EditAsync(request);
+                    await _categoryService.EditAsync(request);
 
                     return RedirectToAction(nameof(Index));
                 }
@@ -132,13 +132,15 @@ namespace BackendProject.Areas.Admin.Controllers
                 return View();
             }
 
-            await _tagService.EditAsync(request);
+           
+
+           
+
+            await _categoryService.EditAsync(request);
 
             return RedirectToAction(nameof(Index));
 
         }
-
-
     }
 }
 

@@ -60,6 +60,8 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<AboutEditVM, About>();
             CreateMap<AboutVM, AboutEditVM>();
             CreateMap<Customer, CustomerVM>();
+            CreateMap<TagCreateVM, Tag>();
+            CreateMap<TagEditVM, Tag>();
 
 
 

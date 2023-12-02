@@ -50,6 +50,7 @@
     <None Remove="Areas\Admin\Views\Review\" />
     <None Remove="Areas\Admin\ViewModels\Customer\" />
     <None Remove="Areas\Admin\Views\Customer\" />
+    <None Remove="Areas\Admin\Views\Tag\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -95,6 +96,7 @@
     <Folder Include="Areas\Admin\Views\Review\" />
     <Folder Include="Areas\Admin\ViewModels\Customer\" />
     <Folder Include="Areas\Admin\Views\Customer\" />
+    <Folder Include="Areas\Admin\Views\Tag\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />

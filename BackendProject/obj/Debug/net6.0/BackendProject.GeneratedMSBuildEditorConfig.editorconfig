@@ -128,6 +128,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU3Vic2NyaWJlL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/Areas/Admin/Views/Tag/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvVGFnL0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/Areas/Admin/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvVGFnL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/Areas/Admin/Views/Team/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvVGVhbS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

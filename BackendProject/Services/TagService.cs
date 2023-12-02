@@ -2,6 +2,7 @@
 using AutoMapper;
 using BackendProject.Areas.Admin.ViewModels.Tag;
 using BackendProject.Data;
+using BackendProject.Models;
 using BackendProject.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,9 +20,40 @@ namespace BackendProject.Services
             _mapper = mapper;
         }
 
+        public async Task CreateAsync(TagCreateVM tag)
+        {
+            Tag dbTag = _mapper.Map<Tag>(tag);
+
+            await _context.Tags.AddAsync(dbTag);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            Tag dbTag = await _context.Tags.Where(m => m.Id == id).FirstOrDefaultAsync();
+            _context.Tags.Remove(dbTag);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task EditAsync(TagEditVM tag)
+        {
+            Tag dbTag = await _context.Tags.AsNoTracking().FirstOrDefaultAsync(m => m.Id == tag.Id);
+
+            _mapper.Map(tag, dbTag);
+
+            _context.Tags.Update(dbTag);
+
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<List<TagVM>> GetAllAsync()
         {
             return _mapper.Map<List<TagVM>>(await _context.Tags.ToListAsync());
+        }
+
+        public async Task<TagVM> GetByIdWithoutTrackingAsync(int id)
+        {
+            return _mapper.Map<TagVM>(await _context.Tags.AsNoTracking().FirstOrDefaultAsync(m=>m.Id==id));
         }
     }
 }

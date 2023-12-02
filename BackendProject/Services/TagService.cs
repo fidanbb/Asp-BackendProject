@@ -55,6 +55,12 @@ namespace BackendProject.Services
         {
             return _mapper.Map<TagVM>(await _context.Tags.AsNoTracking().FirstOrDefaultAsync(m=>m.Id==id));
         }
+
+        public async Task<TagVM> GetByNameWithoutTrackingAsync(string name)
+        {
+            return _mapper.Map<TagVM>(await _context.Tags.AsNoTracking()
+                                                         .FirstOrDefaultAsync(m => m.Name.Trim().ToLower()==name.Trim().ToLower()));
+        }
     }
 }
 

@@ -10,6 +10,7 @@ namespace BackendProject.Services.Interfaces
 		Task DeleteAsync(int id);
 		Task CreateAsync(TagCreateVM tag);
 		Task EditAsync(TagEditVM tag);
+		Task<TagVM> GetByNameWithoutTrackingAsync(string name);
 	}
 }
 

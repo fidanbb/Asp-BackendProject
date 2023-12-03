@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7K0NWItbi52EyfQ4V690FunbvvJuXK0PnC8urD+mYjU=",
+  "Hash": "KEWwp6jgcUQtO9RBAJdIJlfSC10V5soD+/PwGCFVuO0=",
   "Source": "BackendProject",
   "BasePath": "_content/BackendProject",
   "Mode": "Default",
@@ -37876,23 +37876,6 @@
       "OriginalItemSpec": "wwwroot/img/blog/532939ed-ecb2-424b-b881-4265cf3f6472-4.jpg"
     },
     {
-      "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/b3a3dd82-8d2b-451e-80c1-2c9b0e91aab3 - 4.jpg",
-      "SourceId": "BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/",
-      "BasePath": "_content/BackendProject",
-      "RelativePath": "img/blog/b3a3dd82-8d2b-451e-80c1-2c9b0e91aab3 - 4.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/img/blog/b3a3dd82-8d2b-451e-80c1-2c9b0e91aab3 - 4.jpg"
-    },
-    {
       "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/b53eea93-aeaa-4d98-aff7-f2761304fa5c-3.jpg",
       "SourceId": "BackendProject",
       "SourceType": "Discovered",
@@ -37959,23 +37942,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/blog/blog-gallery-3.jpg"
-    },
-    {
-      "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/c8953c31-6339-41c0-beb1-17f1b5b5a067 - 3.jpg",
-      "SourceId": "BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/",
-      "BasePath": "_content/BackendProject",
-      "RelativePath": "img/blog/c8953c31-6339-41c0-beb1-17f1b5b5a067 - 3.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/img/blog/c8953c31-6339-41c0-beb1-17f1b5b5a067 - 3.jpg"
     },
     {
       "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/details.jpg",

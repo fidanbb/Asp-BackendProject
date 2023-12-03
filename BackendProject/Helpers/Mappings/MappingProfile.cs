@@ -9,6 +9,7 @@ using BackendProject.Areas.Admin.ViewModels.Contact;
 using BackendProject.Areas.Admin.ViewModels.Customer;
 using BackendProject.Areas.Admin.ViewModels.Product;
 using BackendProject.Areas.Admin.ViewModels.Review;
+using BackendProject.Areas.Admin.ViewModels.Setting;
 using BackendProject.Areas.Admin.ViewModels.Slider;
 using BackendProject.Areas.Admin.ViewModels.Social;
 using BackendProject.Areas.Admin.ViewModels.Subscribe;
@@ -76,6 +77,7 @@ namespace BackendProject.Helpers.Mappings
 
             CreateMap<Blog, BlogEditVM>().ReverseMap();
             CreateMap<Blog, BlogCreateVM>().ReverseMap();
+            CreateMap<Setting, SettingEditVM>().ReverseMap();
 
 
 

@@ -1,29 +1,35 @@
 ﻿<Properties StartupConfiguration="{BFF00C2C-70AB-4598-866E-A3F634E57285}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Areas/Admin/Controllers/BlogController.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.BackendProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Areas/Admin/Views/Blog/Edit.cshtml">
     <Files>
-      <File FileName="BackendProject/Areas/Admin/Controllers/BlogController.cs" Line="85" Column="58" />
-      <File FileName="BackendProject/Services/BlogService.cs" Line="66" Column="26" />
-      <File FileName="BackendProject/Areas/Admin/Views/Blog/Create.cshtml" Line="33" Column="1" />
-      <File FileName="BackendProject/Areas/Admin/ViewModels/Blog/BlogCreateVM.cs" Line="23" Column="56" />
-      <File FileName="BackendProject/Helpers/Mappings/MappingProfile.cs" Line="81" Column="1" />
-      <File FileName="BackendProject/Areas/Admin/ViewModels/Blog/TagSelectedVM.cs" Line="6" Column="28" />
-      <File FileName="BackendProject/Models/Blog.cs" Line="9" Column="27" />
-      <File FileName="BackendProject/Services/Interfaces/ITagService.cs" Line="15" Column="8" />
-      <File FileName="BackendProject/Services/TagService.cs" Line="55" Column="36" />
+      <File FileName="BackendProject/Areas/Admin/Controllers/BlogController.cs" Line="263" Column="25" />
+      <File FileName="BackendProject/Services/BlogService.cs" Line="110" Column="14" />
+      <File FileName="BackendProject/Services/Interfaces/IBlogService.cs" Line="18" Column="43" />
+      <File FileName="BackendProject/wwwroot/blog.js" Line="10" Column="41" />
+      <File FileName="BackendProject/wwwroot/product.js" Line="28" Column="1" />
+      <File FileName="BackendProject/Services/ProductService.cs" Line="161" Column="1" />
+      <File FileName="BackendProject/Services/Interfaces/IProductService.cs" Line="1" Column="1" />
+      <File FileName="BackendProject/Areas/Admin/Controllers/ProductController.cs" Line="127" Column="1" />
+      <File FileName="BackendProject/Areas/Admin/Views/Blog/Edit.cshtml" Line="98" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BackendProject" expanded="True" />
+          <Node name="BackendProject">
+            <Node name="BackendProject">
+              <Node name="wwwroot" expanded="True">
+                <Node name="img" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.BackendProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

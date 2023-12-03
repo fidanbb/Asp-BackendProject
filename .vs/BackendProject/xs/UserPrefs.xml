@@ -1,33 +1,29 @@
 ﻿<Properties StartupConfiguration="{BFF00C2C-70AB-4598-866E-A3F634E57285}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Areas/Admin/Views/Shared/_Layout.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Areas/Admin/Controllers/BlogController.cs">
     <Files>
-      <File FileName="BackendProject/Areas/Admin/Views/Shared/_Layout.cshtml" Line="394" Column="145" />
+      <File FileName="BackendProject/Areas/Admin/Controllers/BlogController.cs" Line="85" Column="58" />
+      <File FileName="BackendProject/Services/BlogService.cs" Line="66" Column="26" />
+      <File FileName="BackendProject/Areas/Admin/Views/Blog/Create.cshtml" Line="33" Column="1" />
+      <File FileName="BackendProject/Areas/Admin/ViewModels/Blog/BlogCreateVM.cs" Line="23" Column="56" />
+      <File FileName="BackendProject/Helpers/Mappings/MappingProfile.cs" Line="81" Column="1" />
+      <File FileName="BackendProject/Areas/Admin/ViewModels/Blog/TagSelectedVM.cs" Line="6" Column="28" />
+      <File FileName="BackendProject/Models/Blog.cs" Line="9" Column="27" />
+      <File FileName="BackendProject/Services/Interfaces/ITagService.cs" Line="15" Column="8" />
+      <File FileName="BackendProject/Services/TagService.cs" Line="55" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="BackendProject">
-            <Node name="BackendProject">
-              <Node name="Areas">
-                <Node name="Admin" expanded="True">
-                  <Node name="Views" expanded="True">
-                    <Node name="Shared" expanded="True">
-                      <Node name="_Layout.cshtml" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="BackendProject" expanded="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.BackendProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

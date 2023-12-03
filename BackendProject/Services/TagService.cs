@@ -4,6 +4,7 @@ using BackendProject.Areas.Admin.ViewModels.Tag;
 using BackendProject.Data;
 using BackendProject.Models;
 using BackendProject.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace BackendProject.Services
@@ -49,6 +50,16 @@ namespace BackendProject.Services
         public async Task<List<TagVM>> GetAllAsync()
         {
             return _mapper.Map<List<TagVM>>(await _context.Tags.ToListAsync());
+        }
+
+        public List<SelectListItem> GetAllSelectedAsync()
+        {
+            return  _context.Tags.Select(m => new SelectListItem()
+            {
+                Text = m.Name,
+                Value = m.Id.ToString(),
+
+            }).ToList();
         }
 
         public async Task<TagVM> GetByIdWithoutTrackingAsync(int id)

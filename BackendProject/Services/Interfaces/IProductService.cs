@@ -11,6 +11,12 @@ namespace BackendProject.Services.Interfaces
 		Task<int> GetCountAsync();
 		Task<List<ProductVM>> GetPaginatedDatasAsync(int page,int take);
 		Task<List<ProductVM>> SearchAsync(string searchText);
+		Task<ProductDetailVM> GetByIdWithIncludesWithoutTrackingAsync(int id);
+        Task CreateAsync(ProductCreateVM product);
+        Task<ProductVM> GetByNameWithoutTrackingAsync(string name);
+        Task DeleteProductImageAsync(int id);
+        Task EditAsync(ProductEditVM product);
+		Task DeleteAsync(int id);
 
     }
 }

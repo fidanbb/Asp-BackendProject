@@ -10,7 +10,9 @@ namespace BackendProject.Services.Interfaces
         Task<int> GetCountAsync();
         Task<List<BlogVM>> GetByTakeWithImagesAsync(int take);
         Task<BlogDetailVM> GetByIdAsync(int id);
-
+        Task<BlogDetailVM> GetByIdWithoutTracking(int id);
+        Task CreateAsync(BlogCreateVM blog);
+        Task<BlogVM> GetByNameWithoutTrackingAsync(string name);
     }
 }
 

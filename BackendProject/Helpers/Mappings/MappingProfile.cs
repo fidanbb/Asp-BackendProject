@@ -66,6 +66,19 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<Category, CategoryVM>();
             CreateMap<CategoryEditVM, Category>();
             CreateMap<CategoryCreateVM, Category>();
+            CreateMap<Product, ProductDetailVM>().ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
+                              .ForMember(dest => dest.Images, opt => opt.MapFrom(src => src.Images));
+
+            CreateMap<Product, ProductEditVM>();
+
+            CreateMap<ProductEditVM, Product>();
+
+            //CreateMap<Blog, BlogCreateVM>()
+            //.ForMember(dest => dest.TagId, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.TagId)))
+            //.ForMember(dest => dest.TagName, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.Tag.Name)))
+            //.ReverseMap();
+
+
 
         }
     }

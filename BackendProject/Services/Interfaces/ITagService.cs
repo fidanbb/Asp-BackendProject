@@ -1,5 +1,6 @@
 ﻿using System;
 using BackendProject.Areas.Admin.ViewModels.Tag;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BackendProject.Services.Interfaces
 {
@@ -11,6 +12,7 @@ namespace BackendProject.Services.Interfaces
 		Task CreateAsync(TagCreateVM tag);
 		Task EditAsync(TagEditVM tag);
 		Task<TagVM> GetByNameWithoutTrackingAsync(string name);
+		List<SelectListItem> GetAllSelectedAsync();
 	}
 }
 

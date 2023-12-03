@@ -6,7 +6,7 @@ namespace BackendProject.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public List<BlogImage> Images { get; set; }
-        public List<BlogTag> BlogTags { get; set; }
+        public ICollection<BlogTag> BlogTags { get; set; } = new HashSet<BlogTag>();
     }
 }
 

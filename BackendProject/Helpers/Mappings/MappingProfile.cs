@@ -32,7 +32,8 @@ namespace BackendProject.Helpers.Mappings
             CreateMap<Product, ProductVM>().ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name))
                                            .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
 
-            CreateMap<Blog, BlogVM>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
+            CreateMap<Blog, BlogVM>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image))
+                                     .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.Tag).ToList()));
 
             CreateMap<Tag, TagVM>();
             CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m=>m.Tag).ToList()));
@@ -73,10 +74,9 @@ namespace BackendProject.Helpers.Mappings
 
             CreateMap<ProductEditVM, Product>();
 
-            //CreateMap<Blog, BlogCreateVM>()
-            //.ForMember(dest => dest.TagId, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.TagId)))
-            //.ForMember(dest => dest.TagName, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.Tag.Name)))
-            //.ReverseMap();
+            CreateMap<Blog, BlogEditVM>().ReverseMap();
+            CreateMap<Blog, BlogCreateVM>().ReverseMap();
+
 
 
 

@@ -31,7 +31,7 @@ namespace BackendProject.Services
 
         public async Task DeleteAsync(int id)
         {
-            Tag dbTag = await _context.Tags.Where(m => m.Id == id).FirstOrDefaultAsync();
+            Tag dbTag = await _context.Tags.Where(m => m.Id == id).Include(m=>m.BlogTags).FirstOrDefaultAsync();
             _context.Tags.Remove(dbTag);
             await _context.SaveChangesAsync();
         }

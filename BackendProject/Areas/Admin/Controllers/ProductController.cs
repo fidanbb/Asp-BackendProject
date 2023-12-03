@@ -159,6 +159,7 @@ namespace BackendProject.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
 
         public async Task<IActionResult> Edit(int? id, ProductEditVM request)
         {

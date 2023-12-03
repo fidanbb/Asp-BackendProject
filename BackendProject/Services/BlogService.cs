@@ -43,6 +43,8 @@ namespace BackendProject.Services
 
             newImages.FirstOrDefault().IsMain = true;
 
+
+
             var selectedTags = blog.Tags.Where(m => m.Selected).Select(m => m.Value).ToList();
 
             
@@ -67,14 +69,98 @@ namespace BackendProject.Services
 
             await _context.Blogs.AddAsync(dbBlog);
 
-            //await _context.Blogs.AddAsync(new Blog
-            //{
-            //    Title=blog.Title,
-            //    Description=blog.Description,
-            //    Images = newImages,
+        
 
-            //});
 
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            Blog dbBlog = await _context.Blogs.Include(m => m.Images).Include(m=>m.BlogTags).FirstOrDefaultAsync(m => m.Id == id);
+
+            _context.Blogs.Remove(dbBlog);
+
+            await _context.SaveChangesAsync();
+
+            foreach (var item in dbBlog.Images)
+            {
+                string path = _env.GetFilePath("img/blog", item.Image);
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+
+            }
+        }
+
+        public async Task DeleteBlogImageAsync(int id)
+        {
+            BlogImage blogImage = await _context.BlogImages.Where(m => m.Id == id).FirstOrDefaultAsync();
+
+            _context.Remove(blogImage);
+
+            await _context.SaveChangesAsync();
+
+            string path = _env.GetFilePath("img/blog", blogImage.Image);
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+
+        public async Task EditAsync(BlogEditVM blog)
+        {
+            List<BlogImage> newImages = new();
+
+            if (blog.Photos != null)
+            {
+                foreach (var photo in blog.Photos)
+                {
+                    string fileName = $"{Guid.NewGuid()} - {photo.FileName}";
+
+                    string path = _env.GetFilePath("img/blog", fileName);
+
+                    await photo.SaveFileAsync(path);
+
+                    newImages.Add(new BlogImage { Image = fileName });
+                }
+
+                await _context.BlogImages.AddRangeAsync(newImages);
+            }
+
+            newImages.AddRange(blog.Images);
+
+
+            var blogById = await _context.Blogs.Include(m => m.BlogTags).FirstOrDefaultAsync(m=>m.Id==blog.Id);
+
+            var existingIds =  blogById.BlogTags.Select(m => m.TagId).ToList();
+
+            var selectedIds = blog.Tags.Where(m => m.Selected).Select(m => m.Value).Select(int.Parse).ToList();
+
+
+
+
+            var toAdd = selectedIds.Except(existingIds);
+            var toRemove = existingIds.Except(selectedIds);
+
+            blogById.BlogTags = blogById.BlogTags.Where(m => !toRemove.Contains(m.TagId)).ToList();
+
+            foreach (var item in toAdd)
+            {
+                blogById.BlogTags.Add(new BlogTag
+                {
+                    TagId=item
+                });
+            }
+
+
+            blog.Images = newImages;
+
+            _mapper.Map(blog, blogById);
+
+            _context.Blogs.Update(blogById);
 
             await _context.SaveChangesAsync();
         }
@@ -92,7 +178,7 @@ namespace BackendProject.Services
 
         public async Task<BlogDetailVM> GetByIdWithoutTracking(int id)
         {
-            Blog blog = await _context.Blogs.Where(m => m.Id == id).FirstOrDefaultAsync();
+            Blog blog = await _context.Blogs.Where(m => m.Id == id).Include(m=>m.BlogTags).FirstOrDefaultAsync();
 
             return _mapper.Map<BlogDetailVM>(blog);
         }
@@ -123,11 +209,16 @@ namespace BackendProject.Services
         {
             List<Blog> blogs = await _context.Blogs.OrderByDescending(m=>m.CreatedDate)
                                                    .Include(m => m.Images)
+                                                   .Include(m=>m.BlogTags)
+                                                   .ThenInclude(m=>m.Tag)
                                                    .Skip((page * take) - take)
                                                    .Take(take)
                                                    .ToListAsync();
             return _mapper.Map<List<BlogVM>>(blogs);
         }
+
+
+
     }
 }
 

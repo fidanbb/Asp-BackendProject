@@ -13,6 +13,9 @@ namespace BackendProject.Services.Interfaces
         Task<BlogDetailVM> GetByIdWithoutTracking(int id);
         Task CreateAsync(BlogCreateVM blog);
         Task<BlogVM> GetByNameWithoutTrackingAsync(string name);
+        Task DeleteAsync(int id);
+        Task EditAsync(BlogEditVM blog);
+        Task DeleteBlogImageAsync(int id);
     }
 }
 

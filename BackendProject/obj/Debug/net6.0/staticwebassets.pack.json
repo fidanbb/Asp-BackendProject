@@ -6969,6 +6969,10 @@
       "PackagePath": "staticwebassets/admin/vendors/x-editable/bootstrap-editable.min.js"
     },
     {
+      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/blog.js",
+      "PackagePath": "staticwebassets/blog.js"
+    },
+    {
       "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/ckeditor/.DS_Store",
       "PackagePath": "staticwebassets/ckeditor/.DS_Store"
     },
@@ -8885,72 +8889,28 @@
       "PackagePath": "staticwebassets/img/blog/1.jpg"
     },
     {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/155778a1-1ed7-4e58-b605-259382001aac-4.jpg",
-      "PackagePath": "staticwebassets/img/blog/155778a1-1ed7-4e58-b605-259382001aac-4.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/1e7bb586-dd43-43ea-b66e-cc8f017c44f9-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/1e7bb586-dd43-43ea-b66e-cc8f017c44f9-3.jpg"
+      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/13b026fd-b905-49f5-a05d-70d319032f62-4.jpg",
+      "PackagePath": "staticwebassets/img/blog/13b026fd-b905-49f5-a05d-70d319032f62-4.jpg"
     },
     {
       "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/2.jpg",
       "PackagePath": "staticwebassets/img/blog/2.jpg"
     },
     {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/26c6c89d-0ae4-485a-a134-1ed24f5d4fde-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/26c6c89d-0ae4-485a-a134-1ed24f5d4fde-3.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/2af83d11-8e2b-4b14-8342-cf0b72ab96cf-4.jpg",
-      "PackagePath": "staticwebassets/img/blog/2af83d11-8e2b-4b14-8342-cf0b72ab96cf-4.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/2d029761-c390-47d4-aada-2b8fa5df6810-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/2d029761-c390-47d4-aada-2b8fa5df6810-3.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/2f716e2f-40d3-4b7c-8541-b2f54a61e617-2.jpg",
-      "PackagePath": "staticwebassets/img/blog/2f716e2f-40d3-4b7c-8541-b2f54a61e617-2.jpg"
-    },
-    {
       "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/3.jpg",
       "PackagePath": "staticwebassets/img/blog/3.jpg"
     },
     {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/344447fe-6578-4795-9c47-551a909df9ac-4.jpg",
-      "PackagePath": "staticwebassets/img/blog/344447fe-6578-4795-9c47-551a909df9ac-4.jpg"
+      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/532939ed-ecb2-424b-b881-4265cf3f6472-4.jpg",
+      "PackagePath": "staticwebassets/img/blog/532939ed-ecb2-424b-b881-4265cf3f6472-4.jpg"
     },
     {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/4da62132-bcbc-492a-86c2-b210de579abb-4.jpg",
-      "PackagePath": "staticwebassets/img/blog/4da62132-bcbc-492a-86c2-b210de579abb-4.jpg"
+      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/b3a3dd82-8d2b-451e-80c1-2c9b0e91aab3 - 4.jpg",
+      "PackagePath": "staticwebassets/img/blog/b3a3dd82-8d2b-451e-80c1-2c9b0e91aab3 - 4.jpg"
     },
     {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/637ff1ae-6824-4a06-803d-2db509237e32-4.jpg",
-      "PackagePath": "staticwebassets/img/blog/637ff1ae-6824-4a06-803d-2db509237e32-4.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/897b734f-de59-4bd4-9811-190eee749802-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/897b734f-de59-4bd4-9811-190eee749802-3.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/8e860a48-1a39-4f69-a11d-91f720913e50-4.jpg",
-      "PackagePath": "staticwebassets/img/blog/8e860a48-1a39-4f69-a11d-91f720913e50-4.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/8e9788cc-68ef-4d94-af1b-3ee4d4ed2553-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/8e9788cc-68ef-4d94-af1b-3ee4d4ed2553-3.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/a1f5ec38-dead-4f79-a5ae-2381796a3e1a-2.jpg",
-      "PackagePath": "staticwebassets/img/blog/a1f5ec38-dead-4f79-a5ae-2381796a3e1a-2.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/afca7f2b-7651-452c-9a97-569d0d323059-1.jpg",
-      "PackagePath": "staticwebassets/img/blog/afca7f2b-7651-452c-9a97-569d0d323059-1.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/b3fc7193-e1e7-4a07-b0f1-a9f8565dd7b1-2.jpg",
-      "PackagePath": "staticwebassets/img/blog/b3fc7193-e1e7-4a07-b0f1-a9f8565dd7b1-2.jpg"
+      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/b53eea93-aeaa-4d98-aff7-f2761304fa5c-3.jpg",
+      "PackagePath": "staticwebassets/img/blog/b53eea93-aeaa-4d98-aff7-f2761304fa5c-3.jpg"
     },
     {
       "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/blog-gallery-1.jpg",
@@ -8965,32 +8925,16 @@
       "PackagePath": "staticwebassets/img/blog/blog-gallery-3.jpg"
     },
     {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/d0ff5ae4-3e9c-417d-9439-e61105a580a5-4.jpg",
-      "PackagePath": "staticwebassets/img/blog/d0ff5ae4-3e9c-417d-9439-e61105a580a5-4.jpg"
+      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/c8953c31-6339-41c0-beb1-17f1b5b5a067 - 3.jpg",
+      "PackagePath": "staticwebassets/img/blog/c8953c31-6339-41c0-beb1-17f1b5b5a067 - 3.jpg"
     },
     {
       "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/details.jpg",
       "PackagePath": "staticwebassets/img/blog/details.jpg"
     },
     {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/f1d25a66-b315-4d16-bbc4-dd6286e2e7b2-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/f1d25a66-b315-4d16-bbc4-dd6286e2e7b2-3.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/f4382957-6845-4302-ac9e-e5d84d790253-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/f4382957-6845-4302-ac9e-e5d84d790253-3.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/f9f92652-9d38-4c47-bb19-0e7c2db6b935-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/f9f92652-9d38-4c47-bb19-0e7c2db6b935-3.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/fb1e8894-3981-4868-a3e6-5217e7af5ca5-3.jpg",
-      "PackagePath": "staticwebassets/img/blog/fb1e8894-3981-4868-a3e6-5217e7af5ca5-3.jpg"
-    },
-    {
-      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/fc592acb-37d8-4178-ba3e-044b29c5e2ca-4.jpg",
-      "PackagePath": "staticwebassets/img/blog/fc592acb-37d8-4178-ba3e-044b29c5e2ca-4.jpg"
+      "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/f901f8aa-4431-418d-b3fc-505a276d5734-3.jpg",
+      "PackagePath": "staticwebassets/img/blog/f901f8aa-4431-418d-b3fc-505a276d5734-3.jpg"
     },
     {
       "Id": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/img/blog/sidebar-post-1.jpg",

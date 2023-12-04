@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KEWwp6jgcUQtO9RBAJdIJlfSC10V5soD+/PwGCFVuO0=",
+  "Hash": "yQ0PL+aOxH6MwQoN4ICGBTCrLJfncqQkA8q+RB23JlI=",
   "Source": "BackendProject",
   "BasePath": "_content/BackendProject",
   "Mode": "Default",
@@ -38996,6 +38996,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/style.css"
+    },
+    {
+      "Identity": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/wishlist.js",
+      "SourceId": "BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/thatisphii/Desktop/AspHm/Asp-BackendProject/BackendProject/wwwroot/",
+      "BasePath": "_content/BackendProject",
+      "RelativePath": "wishlist.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/wishlist.js"
     }
   ]
 }

@@ -1,29 +1,32 @@
 ﻿<Properties StartupConfiguration="{BFF00C2C-70AB-4598-866E-A3F634E57285}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.BackendProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Data/AppDbContext.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.BackendProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Controllers/ShopController.cs">
     <Files>
-      <File FileName="BackendProject/Views/Shared/_Layout.cshtml" />
-      <File FileName="BackendProject/Areas/Admin/Controllers/AccountController.cs" Line="39" Column="68" />
-      <File FileName="BackendProject/Services/LayoutService.cs" />
-      <File FileName="BackendProject/Areas/Admin/ViewModels/Account/UserVM.cs" />
-      <File FileName="BackendProject/Areas/Admin/Views/Shared/_Layout.cshtml" />
-      <File FileName="BackendProject/Areas/Admin/Views/Account/Index.cshtml" />
-      <File FileName="BackendProject/Data/AppDbContext.cs" Line="36" Column="41" />
+      <File FileName="BackendProject/Controllers/ShopController.cs" Line="111" Column="23" />
+      <File FileName="BackendProject/Controllers/WishlistController.cs" Line="94" Column="1" />
+      <File FileName="BackendProject/Services/WishlistService.cs" Line="64" Column="1" />
+      <File FileName="BackendProject/Models/ProductImage.cs" Line="7" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BackendProject">
-            <Node name="BackendProject" expanded="True" />
+            <Node name="BackendProject">
+              <Node name="Controllers" expanded="True">
+                <Node name="ShopController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
 </Properties>

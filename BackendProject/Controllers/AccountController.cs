@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BackendProject.Areas.Admin.ViewModels.Account;
+using BackendProject.Data;
 using BackendProject.Helpers.Enums;
 using BackendProject.Models;
+using BackendProject.Services;
+using BackendProject.Services.Interfaces;
 using BackendProject.ViewModels.Account;
+using BackendProject.ViewModels.Wishlist;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -17,15 +24,21 @@ namespace BackendProject.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IWishlistService _wishlistService;
+        private readonly AppDbContext _context;
 
 
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
-                                 RoleManager<IdentityRole> roleManager)
+                                 RoleManager<IdentityRole> roleManager,
+                                 IWishlistService wishlistService,
+                                 AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _wishlistService = wishlistService;
+            _context = context;
         }
 
         [HttpGet]
@@ -119,16 +132,83 @@ namespace BackendProject.Controllers
                 ModelState.AddModelError(string.Empty, "Login Informations are wrong");
                 return View();
             }
+            List<WishlistVM> wishlists = new();
 
+            Wishlist dbWishlist =await _context.Wishlists.Include(m => m.WishlistProducts).FirstOrDefaultAsync(m => m.AppUserId == dbUser.Id);
+
+
+            if (dbWishlist is not null)
+            {
+                List<WishlistProduct> wishlistProducts = await _context.WishlistProducts.Where(m => m.WishlistId == dbWishlist.Id).ToListAsync();
+                foreach (var wishlistProduct in wishlistProducts)
+                {
+                    wishlists.Add(new WishlistVM
+                    {
+                        ProductId = wishlistProduct.ProductId,
+                    });
+                }
+                Response.Cookies.Append("wishlist", JsonConvert.SerializeObject(wishlists));
+            }
             return RedirectToAction("Index", "Home");
 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> Logout(string userId)
         {
             await _signInManager.SignOutAsync();
+
+            List<WishlistVM> wishlists = _wishlistService.GetDatasFromCookie();
+
+            Wishlist dbWishlist = await _context.Wishlists.Include(m => m.WishlistProducts).FirstOrDefaultAsync(m => m.AppUserId == userId);
+
+            if (wishlists.Count() != 0)
+            {
+                if (dbWishlist == null)
+                {
+                    dbWishlist = new()
+                    {
+                        AppUserId = userId,
+                        WishlistProducts = new List<WishlistProduct>()
+                    };
+
+                    foreach (var item in wishlists)
+                    {
+                        dbWishlist.WishlistProducts.Add(new WishlistProduct()
+                        {
+                            ProductId = item.ProductId,
+                            WishlistId = dbWishlist.Id
+                        });
+                    }
+                    await _context.Wishlists.AddAsync(dbWishlist);
+                    await _context.SaveChangesAsync();
+                }
+
+                else
+                {
+                    List<WishlistProduct> wishlistProducts = new List<WishlistProduct>();
+                    foreach (var item in wishlists)
+                    {
+                        wishlistProducts.Add(new WishlistProduct()
+                        {
+                            ProductId = item.ProductId,
+                            WishlistId = dbWishlist.Id
+                        });
+
+                        dbWishlist.WishlistProducts = wishlistProducts;
+                        await _context.SaveChangesAsync();
+
+
+                    }
+                }
+                Response.Cookies.Delete("wishlist");
+            }
+
+            else
+            {
+                _context.Wishlists.Remove(dbWishlist);
+            }
 
             return RedirectToAction("Index", "Home");
         }

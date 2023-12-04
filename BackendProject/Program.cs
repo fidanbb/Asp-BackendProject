@@ -44,6 +44,7 @@ builder.Services.AddScoped<IDirectionService, DirectionService>();
 builder.Services.AddScoped<ISubscribeService, SubscribeService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IWishlistService, WishlistService>();
 
 
 

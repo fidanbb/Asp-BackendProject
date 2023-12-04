@@ -6,7 +6,7 @@ namespace BackendProject.Services.Interfaces
 {
 	public interface ILayoutService
 	{
-		HeaderVM GetHeaderDatas();
+		Task<HeaderVM> GetHeaderDatas();
 		FooterVM GetFooterDatas();
 		Task<List<SocialVM>> GetSocialDatas();
 	}

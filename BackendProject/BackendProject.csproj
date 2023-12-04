@@ -57,6 +57,10 @@
     <None Remove="Areas\Admin\Views\Blog\" />
     <None Remove="Areas\Admin\Views\Setting\" />
     <None Remove="Areas\Admin\ViewModels\Setting\" />
+    <None Remove="Views\Account\" />
+    <None Remove="ViewModels\Account\" />
+    <None Remove="Areas\Admin\Views\Account\" />
+    <None Remove="Areas\Admin\ViewModels\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -109,6 +113,10 @@
     <Folder Include="Areas\Admin\Views\Blog\" />
     <Folder Include="Areas\Admin\Views\Setting\" />
     <Folder Include="Areas\Admin\ViewModels\Setting\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="ViewModels\Account\" />
+    <Folder Include="Areas\Admin\Views\Account\" />
+    <Folder Include="Areas\Admin\ViewModels\Account\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />

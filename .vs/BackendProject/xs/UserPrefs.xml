@@ -2,29 +2,21 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.BackendProject PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Areas/Admin/Controllers/AccountController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BackendProject/Data/AppDbContext.cs">
     <Files>
-      <File FileName="BackendProject/Views/Shared/_Layout.cshtml" Line="181" Column="108" />
+      <File FileName="BackendProject/Views/Shared/_Layout.cshtml" />
       <File FileName="BackendProject/Areas/Admin/Controllers/AccountController.cs" Line="39" Column="68" />
-      <File FileName="BackendProject/Services/LayoutService.cs" Line="64" Column="26" />
-      <File FileName="BackendProject/Areas/Admin/ViewModels/Account/UserVM.cs" Line="10" Column="53" />
-      <File FileName="BackendProject/Areas/Admin/Views/Shared/_Layout.cshtml" Line="460" Column="129" />
-      <File FileName="BackendProject/Areas/Admin/Views/Account/Index.cshtml" Line="13" Column="3" />
+      <File FileName="BackendProject/Services/LayoutService.cs" />
+      <File FileName="BackendProject/Areas/Admin/ViewModels/Account/UserVM.cs" />
+      <File FileName="BackendProject/Areas/Admin/Views/Shared/_Layout.cshtml" />
+      <File FileName="BackendProject/Areas/Admin/Views/Account/Index.cshtml" />
+      <File FileName="BackendProject/Data/AppDbContext.cs" Line="36" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BackendProject">
-            <Node name="BackendProject" expanded="True">
-              <Node name="Areas" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="Controllers" expanded="True" />
-                  <Node name="Views" expanded="True">
-                    <Node name="Account" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
+            <Node name="BackendProject" expanded="True" />
           </Node>
         </State>
       </Pad>

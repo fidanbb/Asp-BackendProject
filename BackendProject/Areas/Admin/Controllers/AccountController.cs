@@ -67,7 +67,7 @@ namespace BackendProject.Areas.Admin.Controllers
 
             await _userManager.AddToRoleAsync(user, role.Name);
 
-            return RedirectToAction("Index", "Dashboard");
+            return RedirectToAction("Index", "Account");
         }
 
 
